@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>My First Selenium!!!</title>
+
+
+<style>
+.w3-input {
+	width: 150px;
+	display: block;
+	margin-bottom: 10px;
+	background-color: red;
+}
+</style>
+
+</head>
+<body>
+
+
+
+	<form action="action_page.php">
+		<fieldset>
+			<div>
+				First name:<br> <input type="text" name="firstname" value=""
+					id="fname"> <br> Last name:<br> <input
+					type="text" class="w3-input" name="lastname" value="Mouse"
+					id="lname"> <br> <br>
+				<button onclick="myFunction()" name="theButton">Try it</button>
+
+				<br> <br> <a href="http://www.w3schools.com">Click Me</a>
+				<br> <br>
+
+			</div>
+
+			<div>
+				<h2>Designation</h2>
+				<select id="designation">
+					<option value="MD">MD</option>
+					<option value="prog">Programmer</option>
+					<option value="CEO">CEO</option>
+					<option value="Java">Java</option>
+				</select>
+			</div>
+			
+			<div>
+				<h2>Designation</h2>
+				<select id="designation2">
+					<option value="MD">MD</option>
+					<option value="prog">Programmer</option>
+					<option value="CEO">CEO</option>
+					<option value="Java">Java</option>
+				</select>
+			</div>
+
+			<div>
+				<h2>Radio Buttons</h2>
+				<p>
+					<input class="w3-radio" type="radio" name="gender" value="male">
+					<label class="w3-validate">Male</label>
+				</p>
+				<p>
+					<input class="w3-radio" type="radio" name="gender" value="female">
+					<label class="w3-validate">Female</label>
+				</p>
+				<p>
+					<input class="w3-radio" type="radio" name="gender" value=""> <label class="w3-validate">Don't know
+						(Disabled)</label>
+				</p>
+			</div>
+
+		</fieldset>
+	</form>
+
+
+
+	<script>
+		function myFunction() {
+			alert("I am an alert box!");
+		}
+	</script>
+
+
+</body>
+</html>
