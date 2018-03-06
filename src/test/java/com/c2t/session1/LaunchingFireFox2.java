@@ -5,7 +5,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import org.openqa.selenium.WebDriver;
 
-public class LaunchingFireFox {
+public class LaunchingFireFox2 {
 
 	public static WebDriver driver;
 
