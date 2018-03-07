@@ -10,10 +10,18 @@ public class LaunchingFireFox {
 
 	
 	public static void main(String[] args) {
-		System.setProperty("webdriver.firefox.marionette", "geckodriver.exe");
+		
+		
+		
+		
+		/*System.setProperty("webdriver.firefox.marionette", "geckodriver.exe");
 		driver = new FirefoxDriver();
-		driver.manage().window().maximize();
-		driver.navigate().to(URL);
+		
+		WebDriver.Options opt = driver.manage(); 
+		WebDriver.Window window = opt.window();
+		window.maximize();
+		//driver.manage().window().maximize();
+		driver.navigate().to(URL);*/
 	}
 	
 

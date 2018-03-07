@@ -23,15 +23,15 @@ public class LocatingElementByCssSelector {
 		launchBrowser();
 		
 //		findByCssSelector1();
-//		findByCssSelector2();
+		findByCssSelector2();
 //		findByCssSelector3();
 //		findByCssSelector4();
-		findByCssSelector5();
+//		findByCssSelector5();
 		closeBrowser();
 	}
 	
 	static void findByCssSelector5() {
-		WebElement we = driver.findElement(By.cssSelector("input[name='firstname']"));
+		WebElement we = driver.findElement(By.cssSelector("input[name='lastname']"));
 		System.out.println("we = "+we);
 	}
 
@@ -51,12 +51,14 @@ public class LocatingElementByCssSelector {
 	}
 	
 	static void findByCssSelector2() {
-		WebElement we = driver.findElement(By.cssSelector("input.w3-input"));
+		WebElement we = driver.findElement(By.cssSelector(".w3-input"));
 		System.out.println("we = "+we);
+		we.clear();
+		we.sendKeys("Bell the mouse");
 	}
 	
 	static void closeBrowser() {
-		driver.close();
+		//driver.close();
 	}
 
 
