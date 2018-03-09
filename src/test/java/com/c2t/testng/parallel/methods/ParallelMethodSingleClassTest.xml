@@ -1,0 +1,8 @@
+
+<suite name="ParallelMethodSingleClassTest Suite" parallel="methods" thread-count="3">
+	<test name="ParallelMethodSingleClassTest test">
+		<classes>
+			<class name="com.c2t.testng.parallel.methods.ParallelMethodSingleClassTest" />
+		</classes>
+	</test>
+</suite>

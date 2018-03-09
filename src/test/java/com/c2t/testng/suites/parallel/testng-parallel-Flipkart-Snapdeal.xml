@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="My Suite" thread-count="1" verbose="10" annotations="JDK" parallel="tests">
+  <test name="Flipkart">
+  <classes>
+  	<class name="com.c2t.testng.suites.parallel.Flipkart"/>
+  </classes>
+  </test>
+  
+  <test name="Snapdeal">
+  <classes>
+  	<class name="com.c2t.testng.suites.parallel.Snapdeal"/>
+  </classes>
+  </test>
+  
+</suite> <!-- Failed suite [Default suite] -->

@@ -27,11 +27,11 @@ public class LocatingElementByCssSelector {
 //		findByCssSelector3();
 //		findByCssSelector4();
 //		findByCssSelector5();
-		closeBrowser();
+//		closeBrowser();
 	}
 	
 	static void findByCssSelector5() {
-		WebElement we = driver.findElement(By.cssSelector("input[name='lastname']"));
+		WebElement we = driver.findElement(By.cssSelector("input[name='firstname']"));
 		System.out.println("we = "+we);
 	}
 
