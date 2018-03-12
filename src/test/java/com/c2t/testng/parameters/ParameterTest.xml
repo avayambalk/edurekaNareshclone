@@ -2,8 +2,9 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Parameter test Suite" verbose="1">
 	<!-- This parameter will be passed to every test in this suite -->
-	<parameter name="suite-param" value="suite level parameter" />
-	<!-- <test name="Parameter Test one">
+	<!-- <parameter name="suite-param" value="suite level parameter" /> -->
+	
+	<test name="Parameter Test one">
 		<classes>
 			<class name="com.c2t.testng.parameters.ParameterTest">
 				<methods>
@@ -11,9 +12,9 @@
 				</methods>
 			</class>
 		</classes>
-	</test> -->
-	<test name="Testing for alphabets">
-		<!-- This parameter will be passed this test only -->
+	</test> 
+		<!-- <test name="Testing for alphabets">
+		This parameter will be passed this test only
 		<parameter name="test-two-param" value="ABCDEF" />
 		<classes>
 			<class name="com.c2t.testng.parameters.ParameterTest">
@@ -25,7 +26,7 @@
 	</test>
 	
 	<test name="Testing for alphanumberic">
-		<!-- This parameter will be passed this test only -->
+		This parameter will be passed this test only
 		<parameter name="test-two-param" value="123456" />
 		<classes>
 			<class name="com.c2t.testng.parameters.ParameterTest">
@@ -34,7 +35,7 @@
 				</methods>
 			</class>
 		</classes>
-	</test>
+	</test> -->
 	<!-- <test name="Parameter Test three">
 		Overriding suite level parameter
 		<parameter name="suite-param" value="overiding suite parameter" />

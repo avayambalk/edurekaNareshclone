@@ -4,13 +4,13 @@ import org.testng.annotations.Test;
 
 public class TestNg2 {
 	
-	@Test
+	@Test(priority=0)
 	public void enterTextInFirstName() {
 		System.out.println("TestNg2");
 	}
 
-	@Test(priority=1)
-	public void launchBrowser() {
+	@Test(priority=-1)
+	public void daunchBrowser() {
 		System.out.println("TestNg1");
 	}
 

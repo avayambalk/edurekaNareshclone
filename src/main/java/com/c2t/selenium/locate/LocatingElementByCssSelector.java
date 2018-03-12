@@ -14,35 +14,65 @@ public class LocatingElementByCssSelector {
 	static void launchBrowser() {
 		System.setProperty("webdriver.firefox.marionette", "geckodriver.exe");
 		driver = new FirefoxDriver();
-		driver.manage().window().maximize();
-		String resourceDir = SeleniumUtil.getRootDir() + "LocatingMultipleElements.html";
+		
+		WebDriver.Options opt = driver.manage();
+		WebDriver.Window win = opt.window();
+		win.maximize();
+		
+		//driver.manage().window().maximize();
+		//String resourceDir = SeleniumUtil.getRootDir() + "LocatingMultipleElements.html";
+		String resourceDir = "file:///D:/nchaurasia/Automation-Architect/connect2tech.in-SeleniumWebDriver3.x_2/src/main/resources/LocatingMultipleElements.html";
 		driver.get(resourceDir);
 	}
 
 	public static void main(String[] args) {
 		launchBrowser();
 		
+		
 //		findByCssSelector1();
-		findByCssSelector2();
+//		findByCssSelector2();
 //		findByCssSelector3();
 //		findByCssSelector4();
 //		findByCssSelector5();
+//		findByCssSelector6();
 //		closeBrowser();
+		
+		findByCssSelector7();
+	}
+	
+	static void findByCssSelector7() {
+		WebElement we = driver.findElement(By.cssSelector("input[@type='hidden' and @name='country']"));
+		String value = we.getAttribute("value");
+		System.out.println(value);
+	}
+	
+	
+	static void findByCssSelector6() {
+		WebElement we = driver.findElement(By.cssSelector(".w3-input"));
+		//System.out.println("we = "+we);
+		we.clear();
+		we.sendKeys("Himaja");
 	}
 	
 	static void findByCssSelector5() {
-		WebElement we = driver.findElement(By.cssSelector("input[name='firstname']"));
+		WebElement we = driver.findElement(By.cssSelector("input[name]"));
 		System.out.println("we = "+we);
 	}
 
 	static void findByCssSelector1() {
 		WebElement we = driver.findElement(By.cssSelector("input#fname"));
+		
+		driver.findElement(By.id("fname"));
+		
 		System.out.println("we = "+we);
 	}
 	
 	static void findByCssSelector3() {
+		
 		WebElement we = driver.findElement(By.cssSelector("html body form fieldset div input"));
-		System.out.println("we = "+we);
+		we.sendKeys("vijay joshi");
+		//WebElement we = driver.findElement(By.cssSelector("html body form fieldset div input"));
+		//System.out.println("we = "+we);
 	}
 	
 	static void findByCssSelector4() {

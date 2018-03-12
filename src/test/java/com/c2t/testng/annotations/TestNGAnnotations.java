@@ -20,7 +20,7 @@ public class TestNGAnnotations {
 		System.out.println("afterMethod");
 	}
 	
-	@BeforeTest
+	/*@BeforeTest
 	public void beforeTest(){
 		System.out.println("beforeTest");
 	}
@@ -28,7 +28,7 @@ public class TestNGAnnotations {
 	@AfterTest
 	public void afterTest(){
 		System.out.println("afterTest");
-	}
+	}*/
 
 	@Test
 	public void testMethods1() {
@@ -40,7 +40,7 @@ public class TestNGAnnotations {
 		System.out.println("testMethods2");
 	}
 
-	@BeforeClass
+	/*@BeforeClass
 	public void beforeClass() {
 		System.out.println("beforeClass");
 	}
@@ -48,6 +48,6 @@ public class TestNGAnnotations {
 	@AfterClass
 	public void afterClass() {
 		System.out.println("afterClass");
-	}
+	}*/
 
 }
