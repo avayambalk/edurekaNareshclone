@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 @Listeners(ITestListenerImpl.class)
 public class ITestListenerTc {
 	
-	/*WebDriver driver;
+	WebDriver driver;
 	
 	private static String URL = "https://www.google.co.in/?gfe_rd=cr&dcr=0&ei=UrWLWr7TBaycX_C9l8AC&gws_rd=ssl";
 	
@@ -20,11 +20,19 @@ public class ITestListenerTc {
 		driver = new FirefoxDriver();
 		driver.manage().window().maximize();
 		driver.navigate().to(URL);
-		//TestUtil.setDriver(driver);
-	}*/
+		TestUtil.setDriver(driver);
+	}
 
 	@Test
-	public void testRealReportOne() {
+	public void test1() {
+
+		System.out.println("---testRealReportOne---");
+		Assert.assertTrue(true);
+
+	}
+	
+	@Test
+	public void test2() {
 
 		System.out.println("---testRealReportOne---");
 		Assert.assertTrue(true);

@@ -27,21 +27,37 @@ public class ITestListenerImpl implements ITestListener {
 	}
 
 	public void onTestSuccess(ITestResult arg0) {
-		System.out.println("Test Pass->" + arg0.getName());
+		
+		String name = arg0.getName();
+		System.out.println("name->" + name);
+		
+		String fileName = "d:/pass_" + name + ".jpg";
+		
+		System.out.println("fileName -- "+fileName);
+		
+		WebDriver driver = TestUtil.getDriver();
+		
+		File f = ((TakesScreenshot)driver).getScreenshotAs((OutputType.FILE));
+		try {
+			FileUtils.copyFile(f, new File(fileName));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	public void onTestFailure(ITestResult arg0) {
+		//System.out.println("Test Failed->" + arg0.getName());
 		
 		/*WebDriver driver = TestUtil.getDriver();
 		
 		File f = ((TakesScreenshot)driver).getScreenshotAs((OutputType.FILE));
 		try {
-			FileUtils.copyFile(f, new File("d:/file.jpg"));
+			FileUtils.copyFile(f, new File("d:/faile_tc.jpg"));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}*/
-	}
-
-	public void onTestFailure(ITestResult arg0) {
-		//System.out.println("Test Failed->" + arg0.getName());
 	}
 
 	public void onTestSkipped(ITestResult arg0) {

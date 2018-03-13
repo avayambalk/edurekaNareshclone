@@ -1,4 +1,4 @@
-package com.c2t.event;
+package com.c2t.events;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;

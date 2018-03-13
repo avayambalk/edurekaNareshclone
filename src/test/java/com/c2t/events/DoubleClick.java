@@ -1,4 +1,4 @@
-package com.c2t.event;
+package com.c2t.events;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -14,29 +14,31 @@ import com.c2t.util.SeleniumUtil;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 
-public class MouseEvents2 {
+public class DoubleClick {
 
 	WebDriver driver = null;
 
 	@BeforeTest
 	public void beforeTest() {
-		// String baseUrl = "http://www.facebook.com";
-		String baseUrl = "file:///D:/nchaurasia/Automation-Architect/connect2tech.in-SeleniumWebDriver3.x_2/src/main/resources/LocatingMultipleElements.html";
+		String baseUrl = SeleniumUtil.getSrcTestJava() + "com/c2t/events/DoubleClick.html";
 		System.setProperty("webdriver.firefox.marionette", "geckodriver.exe");
 		driver = new FirefoxDriver();
 		driver.get(baseUrl);
 	}
 
-	@Test(priority = 2, enabled = true)
-	public void testBuildingSeriesOfMultipleActions1() {
+	@Test
+	public void doubleClick() {
 
-		WebElement txtUsername = driver.findElement(By.id("fname"));
+		WebElement we = driver.findElement(By.id("message"));
 		
 		Actions builder = new Actions(driver);
-		Action perform = builder.moveToElement(txtUsername).click().keyDown(txtUsername, Keys.SHIFT)
-				.sendKeys(txtUsername, "Testing").doubleClick().build();
-
+		
+		Actions perform = builder.moveToElement(we).doubleClick();
 		perform.perform();
+		
+		String bgColor =  we.getCssValue("background-color");
+		System.out.println("bgColor = "+bgColor);
+		
 
 	}
 

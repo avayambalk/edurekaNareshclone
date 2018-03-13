@@ -35,13 +35,26 @@ public class LocatingElementByCssSelector {
 //		findByCssSelector4();
 //		findByCssSelector5();
 //		findByCssSelector6();
+//		findByCssSelector7();
 //		closeBrowser();
 		
-		findByCssSelector7();
+		
+		findByCssSelector8();
 	}
 	
+	static void findByCssSelector8() {
+		WebElement we = driver.findElement(By.cssSelector("input#fname"));
+		boolean bool = we.isEnabled();
+		System.out.println(bool);
+		
+		String textInTextbox = we.getAttribute("value");
+		System.out.println("textInTextbox = "+textInTextbox);
+		
+	}
+	
+	
 	static void findByCssSelector7() {
-		WebElement we = driver.findElement(By.cssSelector("input[@type='hidden' and @name='country']"));
+		WebElement we = driver.findElement(By.cssSelector("input[type='hidden'][name='country']"));
 		String value = we.getAttribute("value");
 		System.out.println(value);
 	}
