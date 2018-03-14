@@ -1,27 +1,32 @@
 package com.c2t.innerclass;
 
-class Popcorn {
-	public void pop() {
-		System.out.println("popcorn");
+interface Base{
+	void m1();
+}
+
+class Derived implements Base{
+	public void m1(){
+		System.out.println("I am in derived.....");
 	}
 }
 
-class Food {
-	Popcorn p = new Popcorn() {
-		public void pop() {
-			System.out.println("anonymous popcorn");
-		}
-	};
-	
-	public void foodie(){
-		p.pop();
-	}
-}
 
 public class AnonymousInnerClass {
 	public static void main(String[] args) {
-		Food f = new Food();
-		f.foodie();
+		
+		/*int a = 10;
+	
+		Base b = new Derived();
+		b.m1();*/
+		
+		
+		Base b1 = new Base(){
+			public void m1(){
+				System.out.println("i am here....");
+			}
+		};
+		
+		b1.m1();
 		
 	}
 }

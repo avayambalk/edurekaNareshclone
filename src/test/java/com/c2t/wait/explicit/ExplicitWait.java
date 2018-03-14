@@ -15,6 +15,7 @@ public class ExplicitWait {
 	@Test
 	public void explicitWait1() {
 
+		System.setProperty("webdriver.firefox.marionette", "geckodriver.exe");
 		WebDriver driver = new FirefoxDriver();
 		long lStartTime = 0;
 		long lEndTime = 0;
@@ -28,11 +29,16 @@ public class ExplicitWait {
 		try {
 
 			lStartTime = new Date().getTime();
-			String baseUrl = "file:///D:/nchaurasia/solution-architect/Selenium2.0/c2t-SeleniumWebDriver2.x/htmls/first.html";
+			String baseUrl = "file:///D:/nchaurasia/Automation-Architect/c2t-seleniumwebdriver2.x/htmls/first.html";
 			driver.get(baseUrl);
 			
-			WebDriverWait wait = new WebDriverWait(driver, 5);
-			wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.name("theButton"))));
+			WebDriverWait wait = new WebDriverWait(driver, 2);
+			//wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.name("theButton"))));
+			wait.until(ExpectedConditions.titleContains("value"));
+			
+			
+			/*WebDriverWait wait = new WebDriverWait(driver, 5);
+			wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.name("theButton"))));*/
 
 			/*WebDriverWait wait = new WebDriverWait(driver, 5);
 			wait.until(ExpectedConditions.elementToBeClickable(driver
@@ -47,7 +53,11 @@ public class ExplicitWait {
 			System.out.println(difference);
 
 		} catch (Exception e) {
+			
+			System.out.println("e =" + e);
+			
 			e.printStackTrace();
+			
 		}
 
 		driver.close();

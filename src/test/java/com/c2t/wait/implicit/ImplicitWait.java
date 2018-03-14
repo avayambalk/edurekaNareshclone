@@ -30,31 +30,40 @@ public class ImplicitWait {
 			driver = new FirefoxDriver();
 			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 			String baseUrl = "file:///D:/nchaurasia/Automation-Architect/connect2tech.in-SeleniumWebDriver3.x_2/src/main/resources/LocatingMultipleElements.html";
-			// String tagName = "";
 			driver.get(baseUrl);
 
-			lStartTime = new Date().getTime();
+			
 			// finds elements based on the value of the "class" attribute
-			String className = driver.findElement(By.className("w3-input")).getTagName();
-			System.out.println("className=" + className);
-			Assert.assertEquals(className, "input");
+			lStartTime = new Date().getTime();
+			WebElement we = driver.findElement(By.className("w3-input"));
+			String tag = we.getTagName();
+			//String className = driver.findElement(By.className("w3-input")).getTagName();
+			System.out.println("tag =" + tag);
 			lEndTime = new Date().getTime();
 			difference = lEndTime - lStartTime;
-
-			System.out.println("Elapsed milliseconds-1: " + difference);
-
+			System.out.println("difference = "+difference + " , in milliseconds");
+			
 			lStartTime2 = new Date().getTime();
 			// finds elements based on the value of the "class" attribute
 			// Search for element which does not have this class.
-			className = driver.findElement(By.className("w-input")).getTagName();
-			System.out.println(className);
+			tag = driver.findElement(By.className("w-input")).getTagName();
+			System.out.println(tag);
+			
+			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
+		
 		} catch (Exception e) {
+			
+			System.out.println("exception = "+e);
+			
+			
 			lEndTime2 = new Date().getTime();
 			difference2 = lEndTime2 - lStartTime2;
 			System.out.println("Elapsed milliseconds-2: " + difference2);
 			System.out.println("Elapsed seconds-2: " + (float) difference2 / 1000);
 			Assert.assertTrue(false);
+			
+			
 		}
 
 		driver.close();
