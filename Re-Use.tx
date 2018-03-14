@@ -1,0 +1,6 @@
+System.setProperty("webdriver.firefox.marionette", "geckodriver.exe");
+
+Waits
+----
+
+driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
