@@ -1,5 +1,6 @@
 package in.connect2tech.pom.factory;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -9,6 +10,13 @@ public class Guru99Login {
 	/**
 	 * All WebElements are identified by @FindBy annotation
 	 */
+	
+	
+	/*By user99GuruName = By.name("uid");
+	By password99Guru = By.name("password");
+	By titleText = By.className("barone");
+	By login = By.name("btnLogin");*/
+	
 	WebDriver driver;
 
 	@FindBy(name = "uid")
@@ -22,6 +30,11 @@ public class Guru99Login {
 
 	@FindBy(name = "btnLogin")
 	WebElement login;
+	
+	@FindBy(tagName = "img")
+	WebElement image;
+	
+	
 	
 	public Guru99Login(WebDriver driver) {
 		this.driver = driver;

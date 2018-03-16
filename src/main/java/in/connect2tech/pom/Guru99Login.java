@@ -37,6 +37,25 @@ public class Guru99Login {
 	public String getLoginTitle() {
 		return driver.findElement(titleText).getText();
 	}
+	
+	public void clearId(){
+		driver.findElement(user99GuruName).clear();
+	}
+	
+	public void clearPassword(){
+		driver.findElement(password99Guru).clear();
+	}
+	
+	public String fetchUserIdValue(){
+		
+		String val = driver.findElement(By.xpath("html/body/form/table/tbody/tr[1]/td[2]/input")).getText();
+		if(val == null || val.length() == 0)
+		{
+			val = "";
+		}
+			
+		return val;
+	}
 
 	/**
 	 * 
@@ -57,4 +76,16 @@ public class Guru99Login {
 		// Click Login button
 		this.clickLogin();
 	}
+	
+	public void setFieldValues(String strUserName, String strPasword){
+		this.setUserName(strUserName);
+		this.setPassword(strPasword);
+	}
+	
+	public void resetIdPassword(){
+		this.clearId();
+		this.clearPassword();
+	}
+	
+	
 }

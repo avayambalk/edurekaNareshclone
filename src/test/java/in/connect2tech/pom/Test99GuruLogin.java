@@ -25,10 +25,23 @@ public class Test99GuruLogin {
 		driver = new FirefoxDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get("http://demo.guru99.com/V4/");
+		objLogin = new Guru99Login(driver);
 		
 		//fuction to read error messages.
 	}
-
+	
+	
+	@Test(priority = -1)
+	public void clearTextBoxes() {
+		objLogin.setFieldValues("Lavanya", "password");
+		objLogin.resetIdPassword();
+		
+		//verification
+		String valUserId = objLogin.fetchUserIdValue();
+		Assert.assertEquals("", valUserId);
+	
+	}
+		
 	/**
 	 * This test case will login in http://demo.guru99.com/V4/ Verify login page
 	 * title as guru99 bank Login to application Verify the home page using
@@ -37,7 +50,7 @@ public class Test99GuruLogin {
 	@Test(priority = 0)
 	public void test_Home_Page_Appear_Correct() {
 		// Create Login Page object
-		objLogin = new Guru99Login(driver);
+		
 		// Verify login page title
 		String loginPageTitle = objLogin.getLoginTitle();
 		Assert.assertTrue(loginPageTitle.toLowerCase().contains("guru99 bank"));
