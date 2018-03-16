@@ -20,10 +20,13 @@ public class AlertsTest {
 
 	@BeforeClass
 	public static void setUp() {
+		System.setProperty("webdriver.firefox.marionette", "geckodriver.exe");
 		driver = new FirefoxDriver();
 		driver.get("http://cookbook.seleniumacademy.com/Alerts.html");
 		driver.manage().window().maximize();
 	}
+	
+	
 
 	@Test
 	public void testSimpleAlert() {
@@ -56,8 +59,8 @@ public class AlertsTest {
 		Alert alert = driver.switchTo().alert();
 
 		// Click OK button, by calling accept method
-		alert.accept();
-		//alert.dismiss();
+		//alert.accept();
+		alert.dismiss();
 
 		// Check Page displays correct message
 		WebElement message = driver.findElement(By.id("demo"));

@@ -1,4 +1,4 @@
-package com.c2t.frame;
+package com.c2t.iframe;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -8,11 +8,10 @@ import org.testng.annotations.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-import static org.testng.Assert.assertTrue;
 
 import java.util.List;
 
-public class FramesTest {
+public class IFramesTest {
 
 	public static WebDriver driver;
 
@@ -23,16 +22,11 @@ public class FramesTest {
 		driver.get("file:///D:/nchaurasia/Automation-Architect/connect2tech.in-SeleniumWebDriver3.x_2/src/test/java/com/c2t/frame/ParentFrame.html");
 		driver.manage().window().maximize();
 	}
-	
-	@Test
-	public void launchBrowser(){
-		
-	}
 
 	@Test
 	public void testFrameWithIdOrName() {
 		
-				// Activate the frame on left side using it's id attribute
+			// Activate the frame on left side using it's id attribute
 			driver.switchTo().frame("top");
 			String sourceTop = driver.getPageSource();
 			System.out.println(sourceTop);
@@ -63,7 +57,7 @@ public class FramesTest {
 	@Test
 	public void testFrameByIndex() {
 		// Activate the frame in middle using it's index. Index starts at 0
-		driver.switchTo().frame(10);
+		driver.switchTo().frame(2);
 
 		String sourceTop = driver.getPageSource();
 		System.out.println(sourceTop);
@@ -71,7 +65,6 @@ public class FramesTest {
 	
 	@Test
 	public void testFrameByContents() {
-		
 		// Get all frames on the Page, created with <frame> tag
 		List<WebElement> frames = driver.findElements(By.tagName("frame"));
 		

@@ -22,6 +22,7 @@ public class HandlingPopup {
 
 	@BeforeTest
 	public void beforeTest() {
+		System.setProperty("webdriver.firefox.marionette", "geckodriver.exe");
 		driver = new FirefoxDriver();
 		driver.get("http://demo.guru99.com/popup.php");
 		driver.manage().window().maximize();
@@ -30,6 +31,9 @@ public class HandlingPopup {
 	@Test(priority = 1, enabled = true)
 	public void popUp() {
 		// Launching the site.
+		
+	
+		
 		
 		driver.findElement(By.linkText("Click Here")).click();
 		String MainWindow = driver.getWindowHandle();
