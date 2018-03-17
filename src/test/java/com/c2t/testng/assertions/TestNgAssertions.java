@@ -38,7 +38,7 @@ public class TestNgAssertions {
 	public void assert2() {
 		String s1 = "one";
 		String s2 = "two";
-		Assert.assertEquals(s1, s2);
+		Assert.assertEquals(s1, s2,"The values are not equal...");
 	}
 
 	@Test

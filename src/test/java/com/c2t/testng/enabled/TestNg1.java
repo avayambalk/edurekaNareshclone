@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 public class TestNg1 {
 
-	@Test(enabled=false)
+	@Test(enabled=true)
 	public void test1(){
 		System.out.println("Hello");
 	}
@@ -13,5 +13,4 @@ public class TestNg1 {
 	public void test(){
 		System.out.println("Hello");
 	}
-	
 }

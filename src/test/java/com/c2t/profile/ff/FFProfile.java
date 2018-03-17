@@ -18,8 +18,9 @@ public class FFProfile {
 	public static void setUp() {
 		System.setProperty("webdriver.firefox.marionette", "geckodriver.exe");
 		
+		
 		ProfilesIni ini = new ProfilesIni();
-		FirefoxProfile profile = ini.getProfile("edureka");
+		FirefoxProfile profile = ini.getProfile("Sabina");
 		
 		FirefoxOptions options = new FirefoxOptions();
 		options.setProfile(profile);

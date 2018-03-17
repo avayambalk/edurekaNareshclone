@@ -12,6 +12,8 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
+import java.util.Date;
+
 public class ScreenShot {
 
 	public static WebDriver driver;
@@ -27,11 +29,30 @@ public class ScreenShot {
 	}
 
 	@Test
-	public void testWindowUsingName() {
+	public void testWindowUsingName1() {
 		
-		File f = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		try {
-			FileUtils.copyFile(f, new File("D:/edureka.jpg"));
+	    File screenShot = ((TakesScreenshot)driver).getScreenshotAs((OutputType.FILE));
+	    
+	    long time = new Date().getTime();
+	    
+	    try {
+			FileUtils.copyFile(screenShot, new File("d:/screen-"+time+".jpg"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	
+	@Test
+	public void testWindowUsingName2() {
+		
+	    File screenShot = ((TakesScreenshot)driver).getScreenshotAs((OutputType.FILE));
+	    
+	    long time = new Date().getTime();
+	    
+	    try {
+			FileUtils.copyFile(screenShot, new File("d:/screen-"+time+".jpg"));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -39,14 +60,7 @@ public class ScreenShot {
 		
 		
 		
-		/*File f = ((TakesScreenshot)driver).getScreenshotAs((OutputType.FILE));
-		try {
-			FileUtils.copyFile(f, new File("d:/file.jpg"));
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		*/
+		
 	}
 
 }

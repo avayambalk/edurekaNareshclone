@@ -1,15 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Multi Group Suite" verbose="1">
-	<test name="Group Test one">
+
+	
+
+	<test name="Sanity Test">
 		<groups>
 			<run>
 				<include name="sanity" />
-				<exclude name="regression" />
 			</run>
 		</groups>
 		<classes>
 			<class name="com.c2t.testng.groups.TestNGIncludeExcludeGroups" />
 		</classes>
 	</test>
+	
+	<test name="Regression Test">
+		<groups>
+			<run>
+				<include name="regression" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.c2t.testng.groups.TestNGIncludeExcludeGroups" />
+			
+		</classes>
+	</test>
 </suite>
+

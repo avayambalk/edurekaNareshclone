@@ -26,8 +26,7 @@ public class MyFileListener implements ITestListener{
 
 	@Override
 	public void onTestFailure(ITestResult arg0) {
-		System.out.println("Method failed::"+arg0.getMethod().getQualifiedName());
-		
+		// TODO Auto-generated method stub
 		
 	}
 
@@ -47,8 +46,10 @@ public class MyFileListener implements ITestListener{
 	public void onTestSuccess(ITestResult arg0) {
 		// TODO Auto-generated method stub
 		
-		System.out.println("Success...");
+		System.out.println("I am test success....");
 		
 	}
+
+
 
 }

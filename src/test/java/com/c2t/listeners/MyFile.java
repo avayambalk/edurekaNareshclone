@@ -13,6 +13,6 @@ public class MyFile {
 	
 	@Test
 	public void myTest2(){
-		Assert.assertEquals(true, false);
+		Assert.assertEquals(true, true);
 	}
 }

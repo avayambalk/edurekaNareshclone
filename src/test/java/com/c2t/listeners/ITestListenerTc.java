@@ -35,7 +35,7 @@ public class ITestListenerTc {
 	public void test2() {
 
 		System.out.println("---testRealReportOne---");
-		Assert.assertTrue(true);
+		Assert.assertTrue(false);
 
 	}
 
