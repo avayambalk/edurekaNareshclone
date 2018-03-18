@@ -36,11 +36,17 @@ public class Guru99Login {
 	
 	
 	
-	public Guru99Login(WebDriver driver) {
-		this.driver = driver;
+	public Guru99Login(WebDriver driver1) {
+		this.driver = driver1;
 		// This initElements method will create all WebElements
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(driver1, this);
 	}
+	
+	/*public void loginGuru99(){
+		user99GuruName.sendKeys("userid");
+		password99Guru.sendKeys("password");
+		login.cl
+	}*/
 
 	// Set user name in textbox
 	public void setUserName(String strUserName) {

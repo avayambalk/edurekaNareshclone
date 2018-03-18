@@ -1,0 +1,1 @@
+mvn archetype:generate -DgroupId=com.mycompany.app -DartifactId=SeleniumWebdriver -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
