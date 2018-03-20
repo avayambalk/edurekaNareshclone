@@ -4,7 +4,9 @@
 	<!-- This parameter will be passed to every test in this suite -->
 	<!-- <parameter name="suite-param" value="suite level parameter" /> -->
 	
+	
 	<test name="Parameter Test one">
+	<parameter name="edureka-student" value="Divya"></parameter>
 		<classes>
 			<class name="com.c2t.testng.parameters.ParameterTest">
 				<methods>

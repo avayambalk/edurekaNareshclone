@@ -1,5 +1,6 @@
 package com.c2t.testng.parameters;
 
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -9,10 +10,11 @@ public class ParameterTest {
 	 * parameter is defined at suite level.
 	 */
 
-	@Parameters({"edureka-student"})
+	@Parameters({"edureka-student","edureka-course"})
 	@Test
-	public void prameterTestOne(String param) {
-		System.out.println("Test one suite param is: " + param);
+	public void prameterTestOne(String param1, @Optional("This value is option")String param2) {
+		System.out.println("Test one suite param1 is: " + param1);
+		System.out.println("Test one suite param2 is: " + param2);
 	}
 
 	/**
