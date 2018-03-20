@@ -23,36 +23,19 @@ public class WriteExcelDemo {
 		String data [][] = {
 				{"A","B"},
 				{"C", "D"},
-				{"C", "D"}
+				{"E", "F"}
 		};
 		
-		System.out.println(data.length);
 
-		/*// This data needs to be written (Object[])
-		Map<String, Object[]> data = new TreeMap<String, Object[]>();
-		data.put("1", new Object[] { "ID", "NAME", "LASTNAME" });
-		data.put("2", new Object[] { 1, "Amit", "Shukla" });
-		data.put("3", new Object[] { 2, "Lokesh", "Gupta" });
-		data.put("4", new Object[] { 3, "John", "Adwards" });
-		data.put("5", new Object[] { 4, "Brian", "Schultz" });
+		for(int rowCount=0;rowCount<data.length;rowCount++){
+			Row row = sheet.createRow(rowCount);
+			
 
-		// Iterate over data and write to sheet
-		Set<String> keyset = data.keySet();
-		int rownum = 0;
-		for (String key : keyset) {
-			Row row = sheet.createRow(rownum++);
-			Object[] objArr = data.get(key);
-			int cellnum = 0;
-			for (Object obj : objArr) {
-				Cell cell = row.createCell(cellnum++);
-				if (obj instanceof String)
-					cell.setCellValue((String) obj);
-				else if (obj instanceof Integer)
-					cell.setCellValue((Integer) obj);
+			for(int colCount=0;colCount < data[rowCount].length;colCount++){
+				Cell cell = row.createCell(colCount);
+				cell.setCellValue(data[rowCount][colCount]);
 			}
-		}*/
-		
-		
+		}
 		
 		try {
 			// Write the workbook in file system
@@ -66,4 +49,13 @@ public class WriteExcelDemo {
 			e.printStackTrace();
 		}
 	}
+	
+	//XSSFWorkbook workbook = new XSSFWorkbook();
+	//XSSFSheet sheet = workbook.createSheet("Employee Data");
+	//Row row = sheet.createRow(rowCount);
+	//Cell cell = row.createCell(colCount);
+	//cell.setCellValue(data[rowCount][colCount]);
+	//FileOutputStream out = new FileOutputStream(new File("howtodoinjava_out.xlsx"));
+	//workbook.write(out);
+	//out.close();
 }
