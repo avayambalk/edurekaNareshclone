@@ -28,21 +28,41 @@ public class ReadExcelDemo {
 		// Iterator<Row> rowIterator = sheet.iterator();
 		// Row row = rowIterator.next();
 		// Iterator<Cell> cellIterator = row.cellIterator();
-
+		
+		File f = new File("howtodoinjava_out.xlsx");
 		try {
-			FileInputStream fileInputStream = new FileInputStream("howtodoinjava_demo.xlsx");
-			XSSFWorkbook xssfWorkbook = new XSSFWorkbook(fileInputStream);
-			XSSFSheet xssfSheet = xssfWorkbook.getSheetAt(0);
+			FileInputStream fis = new FileInputStream(f);
+			XSSFWorkbook xssfWorkbook = new XSSFWorkbook(fis);
+			XSSFSheet sheet = xssfWorkbook.getSheetAt(0);
+			
+			String sheetName = sheet.getSheetName();
+			
+			if(sheetName.equals("Employee Data")){
+				Iterator<Row> rows = sheet.iterator();
+				
+				while(rows.hasNext()){
+					System.out.println("I am a row....");
+					Row row = rows.next();
+					
+					Iterator <Cell> columns = row.iterator();
+					
+					while(columns.hasNext()){
+						Cell cell = columns.next();
+						System.out.println("The value of cell = " + cell);
+					}
+				}
+			}
+			
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+		
 
-			String sheetName = xssfSheet.getSheetName();
-			if (sheetName.equals("Employee Data")) {
-				Iterator<Row> iterator = xssfSheet.iterator();
+/*		try {
 
-				while (iterator.hasNext()) {
-					Row row = iterator.next();
-
-					Iterator<Cell> cellIterator = row.iterator();
-
+		
 					while (cellIterator.hasNext()) {
 						Cell cell = cellIterator.next();
 						System.out.println(cell);
@@ -63,6 +83,6 @@ public class ReadExcelDemo {
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
-		}
+		}*/
 	}
 }

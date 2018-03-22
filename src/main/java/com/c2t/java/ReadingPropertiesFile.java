@@ -7,12 +7,22 @@ import java.util.Properties;
 
 public class ReadingPropertiesFile {
 	public static void main(String[] args) {
-		Properties prop = new Properties();
-		InputStream input = null;
+		
 
 		try {
+			
+			Properties prop = new Properties();
+			InputStream input = new FileInputStream("config.properties");
+			prop.load(input);
+			
+			String userName = prop.getProperty("username");
+			System.out.println(userName);
+			
+			String username1 = prop.getProperty("username1");
+			System.out.println(username1);
+			
 
-			input = new FileInputStream("config.properties");
+			/*input = new FileInputStream("config.properties");
 
 			// load a properties file
 			prop.load(input);
@@ -20,18 +30,12 @@ public class ReadingPropertiesFile {
 			// get the property value and print it out
 			System.out.println(prop.getProperty("database"));
 			System.out.println(prop.getProperty("username"));
-			System.out.println(prop.getProperty("password"));
+			System.out.println(prop.getProperty("password"));*/
 
 		} catch (IOException ex) {
 			ex.printStackTrace();
 		} finally {
-			if (input != null) {
-				try {
-					input.close();
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
-			}
+		
 		}
 	}
 }

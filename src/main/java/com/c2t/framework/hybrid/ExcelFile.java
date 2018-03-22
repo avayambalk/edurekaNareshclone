@@ -21,15 +21,7 @@ public class ExcelFile {
 		// only extension name
 		String fileExtensionName = fileName.substring(fileName.indexOf("."));
 		// Check condition if the file is xlsx file
-		if (fileExtensionName.equals(".xlsx")) {
-			// If it is xlsx file then create object of XSSFWorkbook class
-			wb = new XSSFWorkbook(inputStream);
-		}
-		// Check condition if the file is xls file
-		else if (fileExtensionName.equals(".xls")) {
-			// If it is xls file then create object of XSSFWorkbook class
-			wb = new HSSFWorkbook(inputStream);
-		}
+		wb = new XSSFWorkbook(inputStream);
 		// Read sheet inside the workbook by its name
 		Sheet guru99Sheet = wb.getSheet(sheetName);
 		return guru99Sheet;

@@ -9,14 +9,19 @@ import java.util.Properties;
 public class ReadObject {
 	Properties p = new Properties();
 
-	public Properties getObjectRepository() throws IOException {
-		// Read object repository file
-		InputStream stream = new FileInputStream(
-				new File(
-						System.getProperty("user.dir")
-								+ "\\src\\main\\java\\com\\c2t\\framework\\hybrid\\object.properties"));
-		// load all objects
-		p.load(stream);
+	public Properties getObjectRepository() {
+		
+		try {
+			// Read object repository file
+			InputStream stream = new FileInputStream(
+					new File("object.properties"));
+			// load all objects
+			p.load(stream);
+		
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
 		return p;
 	}
 	
@@ -28,7 +33,7 @@ public class ReadObject {
 			String button = (String)prop.get("loginButton");
 			System.out.println("button="+button);
 			
-		} catch (IOException e) {
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}

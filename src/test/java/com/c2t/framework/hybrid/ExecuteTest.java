@@ -21,7 +21,10 @@ public class ExecuteTest {
 
 	@BeforeTest
 	public void beforeTest() throws Exception{
+		System.setProperty("webdriver.firefox.marionette", "geckodriver.exe");
 		webdriver = new FirefoxDriver();
+		
+		
 		file = new ExcelFile();
 		object = new ReadObject();
 		allObjects = object.getObjectRepository();
@@ -30,10 +33,14 @@ public class ExecuteTest {
 	@Test
 	public void testLogin() throws Exception {
 		
-		UIOperation operation = new UIOperation(webdriver);
+		//UIOperation operation = new UIOperation(webdriver);
+		
+		UIOperation operation = new UIOperation();
+		operation.setDriver(webdriver);
+		
 		// Read keyword sheet
-		Sheet sheet = file.readExcel(System.getProperty("user.dir")
-				+ "\\", "TestCase.xlsx", "KeywordFramework");
+		Sheet sheet = file.readExcel("D:/nchaurasia/Automation-Architect/connect2tech.in-SeleniumWebDriver3.x_2",
+				"TestCase.xlsx", "KeywordFramework");
 		// Find number of rows in excel file
 		int rowCount = sheet.getLastRowNum()
 				- sheet.getFirstRowNum();

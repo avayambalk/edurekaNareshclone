@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry including="**/*.java" kind="src" output="target/test-classes" path="src/test/java"/>
+	<classpathentry excluding="**/*.java" kind="src" output="target/test-classes" path="src/test/resources"/>
 	<classpathentry including="**/*.java" kind="src" path="src/main/java"/>
-	<classpathentry kind="src" path="src/main/resources"/>
-	<classpathentry kind="src" path="src/test/resources"/>
+	<classpathentry excluding="**/*.java" kind="src" path="src/main/resources"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="var" path="M2_REPO/org/beanshell/bsh/2.0b4/bsh-2.0b4.jar"/>
-	<classpathentry kind="var" path="M2_REPO/com/beust/jcommander/1.27/jcommander-1.27.jar"/>
+	<classpathentry kind="lib" path="lib/bsh-2.0b6.jar"/>
+	<classpathentry kind="lib" path="lib/hamcrest-core-1.3.jar"/>
+	<classpathentry kind="lib" path="lib/jcommander-1.72.jar"/>
+	<classpathentry kind="lib" path="lib/junit-4.12.jar"/>
+	<classpathentry kind="lib" path="lib/testng-6.14.2.jar"/>
 	<classpathentry kind="lib" path="selenium-server-3.9.1/bundle-jars.jar"/>
 	<classpathentry kind="lib" path="selenium-server-3.9.1/byte-buddy-1.7.9.jar"/>
 	<classpathentry kind="lib" path="selenium-server-3.9.1/commons-codec-1.10.jar"/>
@@ -46,11 +49,6 @@
 	<classpathentry kind="lib" path="selenium-server-3.9.1/xalan-2.7.2.jar"/>
 	<classpathentry kind="lib" path="selenium-server-3.9.1/xercesImpl-2.11.0.jar"/>
 	<classpathentry kind="lib" path="selenium-server-3.9.1/xml-apis-1.4.01.jar"/>
-	<classpathentry kind="lib" path="lib/hamcrest-core-1.3.jar"/>
-	<classpathentry kind="lib" path="lib/junit-4.12.jar"/>
-	<classpathentry kind="lib" path="lib/bsh-2.0b6.jar"/>
-	<classpathentry kind="lib" path="lib/jcommander-1.72.jar"/>
-	<classpathentry kind="lib" path="lib/testng-6.14.2.jar"/>
 	<classpathentry kind="lib" path="poi/commons-codec-1.5.jar"/>
 	<classpathentry kind="lib" path="poi/dom4j-1.6.1.jar"/>
 	<classpathentry kind="lib" path="poi/poi-3.9.jar"/>
