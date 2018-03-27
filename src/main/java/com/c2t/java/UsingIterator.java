@@ -5,21 +5,31 @@ import java.util.Iterator;
 
 public class UsingIterator {
 	public static void main(String[] args) {
-		ArrayList <String> al = new ArrayList<String>();
+
+		ArrayList <String> arrayList = new ArrayList<String>();
+		arrayList.add("A");
+		arrayList.add("B");
+		arrayList.add("C");
+
+		System.out.println(arrayList);
 		
-		al.add("Divya");
-		al.add("Pratima");
-		al.add("Tomes");
+		Iterator<String> iter =arrayList.iterator();
 		
-		Iterator<String> iter = al.iterator();
+		System.out.println(arrayList);
 		
 		while(iter.hasNext()){
+			String str = iter.next();
 			
-			String s = iter.next();
-			System.out.println(s);
-			
+			/*if(str.equals("B")){
+				iter.remove();
+			}
+			System.out.println(str);*/
 		}
 		
+		System.out.println(arrayList);
 		
+		/*for(String s:arrayList){
+			System.out.println(s);
+		}*/
 	}
 }

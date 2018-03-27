@@ -12,25 +12,13 @@ public class ReadingPropertiesFile {
 		try {
 			
 			Properties prop = new Properties();
+			
+			
 			InputStream input = new FileInputStream("config.properties");
 			prop.load(input);
 			
-			String userName = prop.getProperty("username");
-			System.out.println(userName);
-			
-			String username1 = prop.getProperty("username1");
-			System.out.println(username1);
-			
-
-			/*input = new FileInputStream("config.properties");
-
-			// load a properties file
-			prop.load(input);
-
-			// get the property value and print it out
-			System.out.println(prop.getProperty("database"));
-			System.out.println(prop.getProperty("username"));
-			System.out.println(prop.getProperty("password"));*/
+			String val = prop.getProperty("lname");
+			System.out.println(val);
 
 		} catch (IOException ex) {
 			ex.printStackTrace();

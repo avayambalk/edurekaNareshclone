@@ -1,6 +1,8 @@
 package com.c2t.testng.basic;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
+
 
 public class TestNg1 {
 
@@ -11,7 +13,8 @@ public class TestNg1 {
 	
 	@Test
 	public void firstNameNumber(){
-		System.out.println("Hello");
+		int price = 1200;
+		Assert.assertEquals("A", "A");
 	}
 
 	@Test

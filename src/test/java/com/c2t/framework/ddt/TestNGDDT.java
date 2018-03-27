@@ -16,11 +16,11 @@ public class TestNGDDT {
 	public Object[][] testData() {
 		return new Object[][] { 
 				{ "160", "45", "17.6", "Underweight" },
-				{ "165", "50", "18.4", "Underweight" }
-				
-				
+				{ "165", "50", "18.4", "Underweight" },
+				{ "170", "50", "17.3", "Underweight" }
 		};
 	}
+	
 
 	@BeforeTest
 	public void setUp() {
@@ -30,9 +30,12 @@ public class TestNGDDT {
 		driver.get("http://cookbook.seleniumacademy.com/bmicalculator.html");
 
 	}
+	
 
 	@Test(dataProvider = "testData")
 	public void testBMICalculator(String height, String weight, String bmi, String category) {
+		
+		
 		WebElement heightField = driver.findElement(By.name("heightCMS"));
 		heightField.clear();
 		heightField.sendKeys(height);

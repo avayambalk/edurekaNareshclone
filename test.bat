@@ -1,0 +1,1 @@
+java -cp lib\*;target\test-classes org.testng.TestNG src/test/java/com/c2t/testng/parallel/classes/testng-Parallel-Classes.xml
