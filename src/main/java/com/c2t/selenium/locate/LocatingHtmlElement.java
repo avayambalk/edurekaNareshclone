@@ -16,7 +16,7 @@ public class LocatingHtmlElement {
 	static void launchBrowser() {
 		System.setProperty("webdriver.firefox.marionette", "geckodriver.exe");
 		driver = new FirefoxDriver();
-		driver.manage().window().maximize();
+		//driver.manage().window().maximize();
 		String resourceDir = SeleniumUtil.getRootDir() + "LocatingMultipleElements.html";
 		driver.get(resourceDir);
 	}
@@ -25,15 +25,19 @@ public class LocatingHtmlElement {
 		launchBrowser();
 		
 		findByName();
-		findById();
+		/*findById();
 		findByClassName();
 		
-		closeBrowser();
+		closeBrowser();*/
 	}
 
 	static void findByName() {
-		List <WebElement> we  = driver.findElements(By.name("firstname"));
-		System.out.println("we = "+we);
+		/*List <WebElement> we  = driver.findElements(By.name("firstname"));
+		System.out.println("we = "+we);*/
+		
+		WebElement we = driver.findElement(By.name("firstname"));
+		System.out.println(we);
+		we.sendKeys("Hello Selenium");
 	}
 	
 	static void findById() {

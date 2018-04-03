@@ -1,4 +1,4 @@
-package com.c2t.frame;
+package com.c2t.grid;
 
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;

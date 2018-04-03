@@ -64,5 +64,6 @@
 	<classpathentry kind="lib" path="sikuli/sikulixapi-1.1.0.jar"/>
 	<classpathentry kind="lib" path="sikuli/sikulixlibswin-1.1.0.jar"/>
 	<classpathentry kind="lib" path="sikuli/swing-layout-1.0.3.jar"/>
+	<classpathentry kind="lib" path="flash/Flash.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

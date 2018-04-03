@@ -40,7 +40,7 @@ public class AutoITTestChrome {
 	@Test
 	public void testSimpleAlert() {
 		// Click Simple button to show an Alert box
-		WebElement we = driver.findElement(By.name("datafile"));
+		/*WebElement we = driver.findElement(By.name("datafile"));
 		System.out.println(we);
 		we.click();
 		try {
@@ -48,7 +48,7 @@ public class AutoITTestChrome {
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}*/
 		
 	}
 

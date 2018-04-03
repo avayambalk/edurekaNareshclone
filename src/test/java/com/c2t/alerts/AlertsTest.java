@@ -26,8 +26,11 @@ public class AlertsTest {
 		driver.manage().window().maximize();
 	}
 	
+	@Test
+	public void t1() {
+		
+	}
 	
-
 	@Test
 	public void testSimpleAlert() {
 		// Click Simple button to show an Alert box

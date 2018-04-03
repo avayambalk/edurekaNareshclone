@@ -1,4 +1,4 @@
-package com.c2t.grid;
+package com.c2t.frame;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -12,7 +12,7 @@ import static org.testng.Assert.assertTrue;
 
 import java.util.List;
 
-public class GridTest {
+public class Frames {
 
 	public static WebDriver driver;
 

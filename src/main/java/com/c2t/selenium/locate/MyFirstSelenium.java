@@ -7,6 +7,8 @@ public class MyFirstSelenium {
 
 	public static void main(String[] args) {
 		// declaration and instantiation of objects/variables
+		System.setProperty("webdriver.firefox.marionette", "geckodriver.exe");
+
 		WebDriver driver = new FirefoxDriver();
 		String baseUrl = "https://www.google.co.in/";
 		// launch Firefox and direct it to the Base URL

@@ -1,4 +1,4 @@
-package com.c2t.frame;
+package com.c2t.grid;
 
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
@@ -30,21 +30,21 @@ public class NodeChromeTest {
 	@BeforeClass
 	public static void setUp() throws MalformedURLException {
 
-		baseUrl = "file:///D:/nchaurasia/Automation-Architect/connect2tech.in-SeleniumWebDriver3.x_2/src/test/java/com/c2t/frame/ParentFrame.html";
+		baseUrl = "https://selenium-release.storage.googleapis.com/index.html?path=3.9/";
 		nodeUrl = "http://localhost:5555/wd/hub";
-
-		DesiredCapabilities capability = DesiredCapabilities.chrome();
-
-		// Information for node.
-		capability.setBrowserName("chrome");
-		capability.setPlatform(Platform.WIN10);
+		
+		DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+		capabilities.setBrowserName("chrome");
+		capabilities.setPlatform(Platform.WIN10);
+		
 		URL url = new URL(nodeUrl);
-		driver = new RemoteWebDriver(url, capability);
+		driver = new RemoteWebDriver(url, capabilities);
+		
+
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 
-		driver.get(
-				"file:///D:/nchaurasia/Automation-Architect/connect2tech.in-SeleniumWebDriver3.x_2/src/test/java/com/c2t/frame/ParentFrame.html");
+		driver.get(baseUrl);
 		driver.manage().window().maximize();
 	}
 

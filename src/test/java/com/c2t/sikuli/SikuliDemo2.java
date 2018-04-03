@@ -7,7 +7,7 @@ import org.sikuli.script.Pattern;
 import org.sikuli.script.Screen;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class SikuliDemo {
+public class SikuliDemo2 {
 
 	public static void main(String[] args) throws FindFailed {
 
@@ -22,10 +22,10 @@ public class SikuliDemo {
 		driver = new ChromeDriver();
 		driver.get("http://demo.guru99.com/test/image_upload/index.php");
 		driver.findElement(By.xpath(".//*[@id='photoimg']")).click();
-		s.wait(fileInputTextBox, 5);
-		s.type(fileInputTextBox, "D:/nchaurasia/Automation-Architect/img/Sample.txt");
+
+		s.wait(fileInputTextBox,5);
+		s.type(fileInputTextBox,"Maven.txt");
 		s.click(openButton);
-		
 		
 	}
 
