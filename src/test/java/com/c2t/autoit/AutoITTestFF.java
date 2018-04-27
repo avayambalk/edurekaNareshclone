@@ -39,7 +39,7 @@ public class AutoITTestFF {
 		System.out.println(we);
 		we.click();
 		try {
-			Runtime.getRuntime().exec("D:/nchaurasia/Automation-Architect/AutoIT/FileUpload.exe");
+			Runtime.getRuntime().exec("D:/nchaurasia/Automation-Architect/AutoIT/FileUpload-1.exe");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

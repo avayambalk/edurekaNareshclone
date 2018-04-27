@@ -28,11 +28,11 @@ public class LocatingElementByCssSelector2 {
 	public static void main(String[] args) {
 		launchBrowser();
 		
-		//findByCssSelector3_1();	
+		//findByCssSelector_absolute();	
 		//findByCssSelector_Tag_Class();
 		//findByCssSelector_Class();
 		//findByCssSelector_Tag_Id();
-		findByCssSelector_Attribute();
+		//findByCssSelector_Attribute();
 //		findByCssSelector1();
 //		findByCssSelector2();
 
@@ -89,14 +89,14 @@ public class LocatingElementByCssSelector2 {
 		System.out.println("str = "+str);
 	}
 	
-	static void findByCssSelector3_1() {
+	static void findByCssSelector_absolute() {
 		
 		WebElement we = driver.findElement(By.cssSelector("html>body>form>fieldset>div>button"));
 		we.click();
 	}
 	
 	static void findByCssSelector4() {
-		WebElement we = driver.findElement(By.cssSelector("html > body > form > fieldset > div > input"));
+		WebElement we = driver.findElement(By.cssSelector("html > body > form > fieldset > div"));
 		System.out.println("we = "+we);
 	}
 	

@@ -25,19 +25,19 @@ public class ParallelClassesTestOneFF {
 	@AfterClass
 	public void afterClass() {
 		long id = Thread.currentThread().getId();
-		System.out.println("after ParallelClassesTestOne:....................................... " + id);
+		System.out.println("after ParallelClassesTestOneFF:....................................... " + id);
 	}
 
 	@Test
 	public void testMethodOne1() {
 		long id = Thread.currentThread().getId();
-		System.out.println("ParallelClassesTestOne testMethodOne1:....................................... " + id);
+		System.out.println("ParallelClassesTestOneFF testMethodOne1:....................................... " + id);
 	}
 
 	@Test
 	public void testMethodOne2() {
 		long id = Thread.currentThread().getId();
-		System.out.println("ParallelClassesTestOne testMethodOne2:....................................... " + id);
+		System.out.println("ParallelClassesTestOneFF testMethodOne2:....................................... " + id);
 	}
 
 	

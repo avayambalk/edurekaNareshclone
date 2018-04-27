@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.Iterator;
 
 import org.apache.poi.ss.usermodel.Cell;
@@ -30,7 +31,40 @@ public class ReadExcelDemo {
 		// Row row = rowIterator.next();
 		// Iterator<Cell> cellIterator = row.cellIterator();
 		
+		File file = new File("D:/nchaurasia/Automation-Architect/connect2tech.in-SeleniumWebDriver3.x_2/howtodoinjava_out.xlsx");
+
 		try {
+			FileInputStream fis = new FileInputStream(file);
+			XSSFWorkbook workbook = new XSSFWorkbook(fis);
+			
+			XSSFSheet  sheet = workbook.getSheet("Employee Data");
+			Iterator<Row> rows = sheet.iterator();
+			
+			while(rows.hasNext()){
+				
+				Row row = rows.next();
+				
+				Iterator<Cell> cell = row.iterator();
+				
+				while(cell.hasNext()){
+					
+					Cell value = cell.next();
+					System.out.print("value = "+value + "	");
+				}
+				System.out.println();
+				
+			}
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+
+		}
+		
+		
+		
+		/*try {
 			
 			File f = new File("howtodoinjava_out.xlsx");
 			FileInputStream fis = new FileInputStream(f);
@@ -56,7 +90,7 @@ public class ReadExcelDemo {
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} 
+		} */
 		
 
 /*		try {

@@ -10,35 +10,25 @@ public class NoPriorityInTestNG {
 	WebDriver driver;
 
 	// Method 1: Open Brower say Firefox
-	@Test
+	@Test(priority=-1)
 	public void openBrowser() {
-		driver = new FirefoxDriver();
 	}
 	
-	@Test
-	public void openDoor() {
-		driver = new FirefoxDriver();
-	}
-
 	// Method 2: Launch Google.com
-	@Test
+	@Test(priority=2)
 	public void launchGoogle() {
-		driver.get("http://www.google.co.in");
+		
 	}
 
 	// Method 3: Perform a search using "Facebook"
-	@Test
+	@Test(priority=2)
 	public void peformSeachAndClick1stLink() {
-		driver.findElement(By.xpath(".//*[@title='Search']")).sendKeys(
-				"Facebook");
+		
 	}
 
 	// Method 4: Verify Google search page title.
-	@Test
+	@Test(priority=4)
 	public void FaceBookPageTitleVerification() throws Exception {
-		driver.findElement(By.xpath(".//*[@value='Search']")).click();
-		Thread.sleep(3000);
-		Assert.assertEquals(
-				driver.getTitle().contains("Facebook - Google Search"), true);
+		throw new Exception();
 	}
 }

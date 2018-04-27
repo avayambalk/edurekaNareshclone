@@ -9,7 +9,7 @@ class Student{
 	
 	public void display(){
 		System.out.println("name = " + name);
-		System.out.println("this = " + this);
+		//System.out.println("this = " + this);
 		
 	}
 }

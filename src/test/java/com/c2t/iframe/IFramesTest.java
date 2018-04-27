@@ -19,50 +19,28 @@ public class IFramesTest {
 	public static void setUp() {
 		System.setProperty("webdriver.firefox.marionette", "geckodriver.exe");
 		driver = new FirefoxDriver();
-		driver.get("file:///D:/nchaurasia/Automation-Architect/connect2tech.in-SeleniumWebDriver3.x_2/src/test/java/com/c2t/frame/ParentFrame.html");
+		driver.get("file:///D:/nchaurasia/Automation-Architect/connect2tech.in-SeleniumWebDriver3.x_2/src/test/java/com/c2t/iframe/ParentFrame.html");
 		driver.manage().window().maximize();
-	}
-
-	@Test
-	public void testFrameWithIdOrName() {
-		
-			// Activate the frame on left side using it's id attribute
-			driver.switchTo().frame("top");
-			String sourceTop = driver.getPageSource();
-			System.out.println(sourceTop);
-			
-			System.out.println("-------------------------------------------------");
-			
-			
-			driver.switchTo().defaultContent();
-			String sourceParent = driver.getPageSource();
-			System.out.println(sourceParent);
-			
-			
-			driver.switchTo().frame("main");
-			String sourceMain = driver.getPageSource();
-			System.out.println(sourceMain);
-			
-			System.out.println("-------------------------------------------------");
-			
-			
-			driver.switchTo().defaultContent();
-			sourceParent = driver.getPageSource();
-			System.out.println(sourceParent);
-			
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
-
-
 	@Test
-	public void testFrameByIndex() {
-		// Activate the frame in middle using it's index. Index starts at 0
-		driver.switchTo().frame(2);
-
-		String sourceTop = driver.getPageSource();
-		System.out.println(sourceTop);
+	public void byName(){
+		WebElement we = driver.findElement(By.name("iframe1"));
+		System.out.println(we.toString());
+		driver.switchTo().frame(we);
+		String url = driver.getCurrentUrl();
+		String text = driver.findElement(By.xpath("html/body/div[1]/div/div[1]/main/article/header/h1")).getText();
+		System.out.println("url="+url);
+		System.out.println("text="+text);
 	}
-	
+
+
 	@Test
 	public void testFrameByContents() {
 		// Get all frames on the Page, created with <frame> tag

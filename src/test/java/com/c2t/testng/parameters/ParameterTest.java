@@ -12,7 +12,7 @@ public class ParameterTest {
 
 	@Parameters({"edureka-student","edureka-course"})
 	@Test
-	public void prameterTestOne(String param1, @Optional("This value is option")String param2) {
+	public void prameterTestOne(String param1, String param2) {
 		System.out.println("Test one suite param1 is: " + param1);
 		System.out.println("Test one suite param2 is: " + param2);
 	}

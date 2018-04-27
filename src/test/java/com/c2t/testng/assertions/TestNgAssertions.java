@@ -27,7 +27,7 @@ public class TestNgAssertions {
 
 	@Test
 	public void assert1() {
-		String expected = "My First Selenium!!!";
+		String expected = "My First Selenium";
 
 		String titleOfPage = driver.getTitle();
 		

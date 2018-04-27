@@ -12,15 +12,20 @@ public class TestNGDDT {
 
 	private WebDriver driver;
 
+	/*
+	 * Mark a method as supplying data for a test method. The data provider name
+	 * defaults to method name. The annotated method must return an Object[][]
+	 * where each Object[] can be assigned the parameter list of the test
+	 * method. The @Test method that wants to receive data from this
+	 * DataProvider needs to use a dataProvider name equals to the name of this
+	 * annotation.
+	 */
 	@DataProvider
 	public Object[][] testData() {
-		return new Object[][] { 
-				{ "160", "45", "17.6", "Underweight" },
-				{ "165", "50", "18.4", "Underweight" },
-				{ "170", "50", "17.3", "Underweight" }
-		};
+		return new Object[][] { { "160", "45", "17.6", "Underweight" }, 
+			{ "165", "50", "18.4", "Underweight" },
+				{ "170", "50", "17.3", "Underweight" } };
 	}
-	
 
 	@BeforeTest
 	public void setUp() {
@@ -30,16 +35,14 @@ public class TestNGDDT {
 		driver.get("http://cookbook.seleniumacademy.com/bmicalculator.html");
 
 	}
-	
 
-	@Test(dataProvider = "testData")
+	@Test(dataProvider="testData")
 	public void testBMICalculator(String height, String weight, String bmi, String category) {
-		
-		
+
 		WebElement heightField = driver.findElement(By.name("heightCMS"));
 		heightField.clear();
 		heightField.sendKeys(height);
-		
+
 		WebElement weightField = driver.findElement(By.name("weightKg"));
 		weightField.clear();
 		weightField.sendKeys(weight);
@@ -50,8 +53,7 @@ public class TestNGDDT {
 		WebElement bmiLabel = driver.findElement(By.name("bmi"));
 		assertEquals(bmiLabel.getAttribute("value"), bmi);
 
-		WebElement bmiCategoryLabel = driver.findElement(By
-				.name("bmi_category"));
+		WebElement bmiCategoryLabel = driver.findElement(By.name("bmi_category"));
 		assertEquals(bmiCategoryLabel.getAttribute("value"), category);
 	}
 

@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 public class Guru99Login {
 	WebDriver driver;
-	By user99GuruName = By.name("uid");
+	By user99GuruName = By.name("uid1");
 	By password99Guru = By.name("password");
 	By titleText = By.className("barone");
 	By login = By.name("btnLogin");

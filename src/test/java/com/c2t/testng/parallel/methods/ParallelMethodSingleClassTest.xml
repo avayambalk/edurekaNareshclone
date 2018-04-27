@@ -1,8 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="ParallelMethodSingleClassTest Suite" parallel="methods" thread-count="2">
+<suite name="suite1" parallel="methods" thread-count="4">
+	<test name="test1">
+		<classes>
+			<class name="com.c2t.testng.parallel.methods.ParallelMethodSingleClassTest"></class>
+		</classes>
+	</test>
+</suite>
+
+<!-- <suite name="My First Suite" parallel="methods" thread-count="5">
+<test name="MyTest">
+<classes>
+<class name=""></class>
+</classes>
+</test>
+</suite> -->
+
+<!-- <suite name="Mutiple Threads" parallel="methods" thread-count="4">
+	<test name="My Test">
+		<classes>
+			<class name="com.c2t.testng.parallel.methods.ParallelMethodSingleClassTest"></class>
+		</classes>
+	</test>
+</suite> -->
+
+
+
+<!-- <suite name="ParallelMethodSingleClassTest Suite" parallel="methods" thread-count="2">
 	<test name="ParallelMethodSingleClassTest test">
 		<classes>
 			<class name="com.c2t.testng.parallel.methods.ParallelMethodSingleClassTest" />
 		</classes>
 	</test>
-</suite>
+</suite> -->

@@ -31,12 +31,18 @@ public class MouseEvents2 {
 	public void testBuildingSeriesOfMultipleActions1() {
 
 		WebElement txtUsername = driver.findElement(By.id("fname"));
+		txtUsername.clear();
 		
 		Actions builder = new Actions(driver);
-		Action perform = builder.moveToElement(txtUsername).click().keyDown(txtUsername, Keys.SHIFT)
-				.sendKeys(txtUsername, "Testing").doubleClick().build();
+		//Action action = builder.moveToElement(txtUsername).click().keyDown(Keys.SHIFT).sendKeys("abcd").doubleClick().build();
+		Action action = builder.moveToElement(txtUsername).click().keyDown(Keys.SHIFT).sendKeys("Testing").doubleClick()
+				.build();
+		action.perform();
+		
+		/*Action perform = builder.moveToElement(txtUsername).click().keyDown(txtUsername, Keys.SHIFT)
+				.sendKeys(txtUsername, "Testing").doubleClick().build();*/
 
-		perform.perform();
+		//perform.perform();
 
 	}
 

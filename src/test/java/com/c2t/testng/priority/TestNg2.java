@@ -9,7 +9,7 @@ public class TestNg2 {
 		System.out.println("TestNg2");
 	}
 
-	@Test(priority=-1)
+	@Test(priority=-1,enabled=false)
 	public void daunchBrowser() {
 		System.out.println("TestNg1");
 	}

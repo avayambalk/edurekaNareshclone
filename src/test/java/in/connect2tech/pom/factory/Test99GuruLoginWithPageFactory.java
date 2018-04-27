@@ -17,6 +17,7 @@ public class Test99GuruLoginWithPageFactory {
 
 	@BeforeTest
 	public void setup() {
+		System.setProperty("webdriver.firefox.marionette", "geckodriver.exe");
 		driver = new FirefoxDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get("http://demo.guru99.com/V4/");
@@ -31,6 +32,8 @@ public class Test99GuruLoginWithPageFactory {
 	public void test_Home_Page_Appear_Correct() {
 		// Create Login Page object
 		objLogin = new Guru99Login(driver);
+		System.out.println("objLogin="+objLogin);
+		
 		// Verify login page title
 		String loginPageTitle = objLogin.getLoginTitle();
 		Assert.assertTrue(loginPageTitle.toLowerCase().contains("guru99 bank"));

@@ -22,7 +22,8 @@ public class AlertsTest {
 	public static void setUp() {
 		System.setProperty("webdriver.firefox.marionette", "geckodriver.exe");
 		driver = new FirefoxDriver();
-		driver.get("http://cookbook.seleniumacademy.com/Alerts.html");
+		//driver.get("http://cookbook.seleniumacademy.com/Alerts.html");
+		driver.get("file:///D:/nchaurasia/Automation-Architect/connect2tech.in-SeleniumWebDriver3.x_2/src/main/resources/Alert.html");
 		driver.manage().window().maximize();
 	}
 	
@@ -37,8 +38,8 @@ public class AlertsTest {
 		driver.findElement(By.id("simple")).click();
 	
 		// Optionally we can also wait for an Alert box using the WebDriverWait
-		new WebDriverWait(driver, 10)
-				.until(ExpectedConditions.alertIsPresent());
+		/*new WebDriverWait(driver, 10)
+				.until(ExpectedConditions.alertIsPresent());*/
 		
 		// Get the Alert
 		Alert alert = driver.switchTo().alert();
