@@ -39,7 +39,7 @@ public class LocatingElementByCssSelector {
 //		closeBrowser();
 		
 		
-		findByCssSelector8();
+		//findByCssSelector8();
 	}
 	
 	static void findByCssSelector8() {

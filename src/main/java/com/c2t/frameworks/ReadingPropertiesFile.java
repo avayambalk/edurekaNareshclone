@@ -1,4 +1,4 @@
-package com.c2t.java;
+package com.c2t.frameworks;
 
 import java.io.FileInputStream;
 import java.io.IOException;

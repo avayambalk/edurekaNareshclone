@@ -1,7 +1,9 @@
-package com.c2t.java;
+package com.c2t.frameworks;
 
 public class MultidimensionalArray {
 	public static void main(String[] args) {
+		
+		int arr [] = {10,20,30};
 
 		int a[][] = new int[][] { 
 			{ 10, 20 }, 

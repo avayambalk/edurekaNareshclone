@@ -29,18 +29,18 @@ public class ScreenShot {
 	}
 
 	@Test
-	public void testWindowUsingName1() {
+	public void testWindowUsingName1() throws IOException {
 		
-	    File screenShot = ((TakesScreenshot)driver).getScreenshotAs((OutputType.FILE));
+		TakesScreenshot sc = (TakesScreenshot)driver;
+		
+		
+	    File screenShot = sc.getScreenshotAs((OutputType.FILE));
 	    
 	    long time = new Date().getTime();
 	    
-	    try {
+	    
 			FileUtils.copyFile(screenShot, new File("d:/screen-"+time+".jpg"));
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
 		
 	}
 	

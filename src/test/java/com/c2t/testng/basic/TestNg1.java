@@ -7,19 +7,18 @@ import org.testng.annotations.Test;
 public class TestNg1 {
 
 	@Test
-	public void firstNameAlphabets(){
+	public void testCase1(){
 		System.out.println("Hello");
 	}
 	
-	@Test
-	public void firstNameNumber(){
-		int price = 1200;
+	@Test(priority=1)
+	public void testCase2(){
 	}
 
-	
-	@Test
-	public void firstNameNumber2(){
+	@Test(priority=1)
+	public void testCase3(){
 		throw new RuntimeException();
 	}
+	
 	
 }

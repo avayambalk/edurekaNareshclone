@@ -33,7 +33,7 @@ public class Test99GuruLogin {
 	
 	@Test(priority = -1)
 	public void clearTextBoxes() {
-		objLogin.setFieldValues("Lavanya", "password");
+		//objLogin.setFieldValues("Lavanya", "password");
 		objLogin.resetIdPassword();
 		
 		//verification

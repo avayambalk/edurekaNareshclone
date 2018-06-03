@@ -22,9 +22,15 @@ public class TestNGDDT {
 	 */
 	@DataProvider
 	public Object[][] testData() {
-		return new Object[][] { { "160", "45", "17.6", "Underweight" }, 
+		return new Object[][] {
+			
+			{ "160", "45", "17.6", "Underweight" }, 
+			
 			{ "165", "50", "18.4", "Underweight" },
-				{ "170", "50", "17.3", "Underweight" } };
+				
+			{ "170", "50", "17.3", "Underweight" }
+			
+		};
 	}
 
 	@BeforeTest

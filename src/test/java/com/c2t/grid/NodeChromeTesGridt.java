@@ -21,7 +21,7 @@ import java.net.URL;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class NodeChromeTest {
+public class NodeChromeTesGridt {
 
 	public static WebDriver driver;
 	static String baseUrl;
@@ -31,7 +31,7 @@ public class NodeChromeTest {
 	public static void setUp() throws MalformedURLException {
 
 		baseUrl = "https://selenium-release.storage.googleapis.com/index.html?path=3.9/";
-		nodeUrl = "http://localhost:5555/wd/hub";
+		nodeUrl = "http://localhost:4444/wd/hub";
 		
 		DesiredCapabilities capabilities = DesiredCapabilities.chrome();
 		capabilities.setBrowserName("chrome");

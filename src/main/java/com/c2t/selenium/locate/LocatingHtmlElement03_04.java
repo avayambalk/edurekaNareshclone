@@ -28,16 +28,16 @@ public class LocatingHtmlElement03_04 {
 		
 		//WebElement we3 = driver.findElement(By.className("w3-input"));
 		
-		/*WebElement we4 = driver.findElement(By.linkText("Click Me"));
+		/*WebElement we4 = driver.findElement(By.linkText("Partial Link Test"));
 		we4.click();*/
 		
 		/*WebElement we4 = driver.findElement(By.partialLinkText("Link"));
 		we4.click();*/
 		
-		List<WebElement> l = driver.findElements(By.tagName("input"));
+	/*	List<WebElement> l = driver.findElements(By.tagName("input"));
 		
 		WebElement second = l.get(1);
-		second.sendKeys("input tag...");
+		second.sendKeys("input tag...");*/
 		
 		
 	}

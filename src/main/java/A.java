@@ -1,8 +1,7 @@
-
+import java.util.Date;
 
 public class A {
 	public static void main(String[] args) {
-		B b = new B();
-		b.method_B();
+		System.out.println(new Date().getTime());
 	}
 }

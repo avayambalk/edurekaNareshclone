@@ -1,4 +1,4 @@
-package com.c2t.java;
+package com.c2t.frameworks;
 
 class Student{
 	String name;

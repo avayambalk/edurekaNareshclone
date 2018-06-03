@@ -18,8 +18,8 @@ public class TestNGMultipleGroups1 {
 		System.out.println("com.c2t.testng.groups.TestNGMultipleGroups1.testMethodThree()/regression");
 	}
 	
-	@Test(groups = {"g1","g2"})
+	/*@Test(groups = {"g1","g2"})
 	public void testMethodFour() {
 		System.out.println("com.c2t.testng.groups.TestNGMultipleGroups1.testMethodFour()/regression");
-	}
+	}*/
 }

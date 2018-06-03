@@ -5,6 +5,7 @@
 		<groups>
 			<run>
 				<exclude name="regression"/>
+				<exclude name="sanity"/>
 			</run>
 		</groups>
 		<classes>
@@ -12,24 +13,4 @@
 			<!-- <class name="com.c2t.testng.groups.TestNGMultipleGroups2" /> -->
 		</classes>
 	</test>
-	 <test name="TestNGMultipleGroups Test2">
-		<groups>
-			<run>
-				<include name="regression" />
-			</run>
-		</groups>
-		<classes>
-			<class name="com.c2t.testng.groups.TestNGMultipleGroups2" />
-		</classes>
-	</test>
-	<!-- <test name="TestNGMultipleGroups Test two">
-		<groups>
-			<run>
-				<include name="regression" />
-			</run>
-		</groups>
-		<classes>
-			<class name="com.c2t.testng.groups.TestNGMultipleGroups" />
-		</classes>
-	</test> -->
 </suite>

@@ -14,8 +14,8 @@ public class SikuliDemo2 {
 		System.setProperty("webdriver.chrome.driver", "D:/nchaurasia/Automation-Architect/connect2tech.in-SeleniumWebDriver3.x_2/driver/chromedriver.exe");
 		String path = "D:/nchaurasia/Automation-Architect/img/";
 		Screen s = new Screen();
-		Pattern fileInputTextBox = new Pattern(path + "TextBox3.PNG");
-		Pattern openButton = new Pattern(path + "OpenButton3.PNG");
+		Pattern fileInputTextBox = new Pattern(path + "img1.PNG");
+		Pattern openButton = new Pattern(path + "img2.PNG");
 		WebDriver driver;
 
 		// Open Chrome browser

@@ -28,10 +28,7 @@ public class AutoITTestChrome {
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		
 		driver.get("http://jkorpela.fi/forms/file.html");
-		
-		
 		//driver.manage().window().maximize();
 	}
 	

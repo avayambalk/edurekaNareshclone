@@ -7,49 +7,46 @@ import org.testng.ITestResult;
 public class MyFileListener implements ITestListener{
 
 	@Override
-	public void onFinish(ITestContext arg0) {
+	public void onTestStart(ITestResult result) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void onStart(ITestContext arg0) {
+	public void onTestSuccess(ITestResult result) {
+		// TODO Auto-generated method stub
+		System.out.println("onTestSuccess..");
+	}
+
+	@Override
+	public void onTestFailure(ITestResult result) {
+		// TODO Auto-generated method stub
+		System.out.println("onTestFailure..");
+	}
+
+	@Override
+	public void onTestSkipped(ITestResult result) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void onTestFailedButWithinSuccessPercentage(ITestResult arg0) {
+	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void onTestFailure(ITestResult arg0) {
+	public void onStart(ITestContext context) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void onTestSkipped(ITestResult arg0) {
+	public void onFinish(ITestContext context) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
-	public void onTestStart(ITestResult arg0) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void onTestSuccess(ITestResult arg0) {
-		// TODO Auto-generated method stub
-		
-		System.out.println("I am test success....");
-		
-	}
-
-
-
+	
 }

@@ -15,13 +15,13 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 //import statements
 public class ReadExcelDemo {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 
 		readDataFromExcelSheet();
 
 	}
 
-	static void readDataFromExcelSheet() {
+	static void readDataFromExcelSheet() throws IOException {
 		// FileInputStream file = new FileInputStream(new
 		// File("howtodoinjava_demo.xlsx"));
 		// XSSFWorkbook workbook = new XSSFWorkbook(file);
@@ -32,90 +32,24 @@ public class ReadExcelDemo {
 		// Iterator<Cell> cellIterator = row.cellIterator();
 		
 		File file = new File("D:/nchaurasia/Automation-Architect/connect2tech.in-SeleniumWebDriver3.x_2/howtodoinjava_out.xlsx");
-
-		try {
-			FileInputStream fis = new FileInputStream(file);
-			XSSFWorkbook workbook = new XSSFWorkbook(fis);
+		FileInputStream fis = new FileInputStream(file);
+		XSSFWorkbook workbook = new XSSFWorkbook(fis);
+		XSSFSheet sheet = workbook.getSheet("Employee Data");
+		Iterator<Row> rows = sheet.iterator();
+		
+		while(rows.hasNext()){
 			
-			XSSFSheet  sheet = workbook.getSheet("Employee Data");
-			Iterator<Row> rows = sheet.iterator();
+			Row row = rows.next();
+			Iterator<Cell>  cells = row.cellIterator();
 			
-			while(rows.hasNext()){
-				
-				Row row = rows.next();
-				
-				Iterator<Cell> cell = row.iterator();
-				
-				while(cell.hasNext()){
-					
-					Cell value = cell.next();
-					System.out.print("value = "+value + "	");
-				}
-				System.out.println();
-				
+			while(cells.hasNext()){
+				Cell cell = cells.next();
+				System.out.print(cell + "	");
 			}
 			
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-
+			System.out.println();
+			
 		}
-		
-		
-		
-		/*try {
-			
-			File f = new File("howtodoinjava_out.xlsx");
-			FileInputStream fis = new FileInputStream(f);
-			
-			XSSFWorkbook workbook = new XSSFWorkbook(fis);
-			XSSFSheet sheet = workbook.getSheetAt(0);
-			Iterator <Row> rowIter =  sheet.iterator();
-			
-			while(rowIter.hasNext()){
-				Row row = rowIter.next();
-				
-				Iterator<Cell> cells = row.iterator();
-				
-				while(cells.hasNext()){
-					Cell cell = cells.next();
-					System.out.print(cell);
-					System.out.print(" ");
-				}
-				System.out.println();
-				
-			}
-			
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} */
-		
 
-/*		try {
-
-		
-					while (cellIterator.hasNext()) {
-						Cell cell = cellIterator.next();
-						System.out.println(cell);
-
-						switch (cell.getCellType()) {
-						case Cell.CELL_TYPE_NUMERIC:
-							double d = cell.getNumericCellValue();
-							System.out.println("d=" + d);
-							break;
-						case Cell.CELL_TYPE_STRING:
-							String s = cell.getStringCellValue();
-							System.out.println("s=" + s);
-							cell.setCellValue("testing");
-							break;
-						}
-					}
-				}
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		}*/
 	}
 }

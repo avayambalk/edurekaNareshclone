@@ -1,55 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Parameter test Suite" verbose="1">
-	<!-- This parameter will be passed to every test in this suite -->
-	<!-- <parameter name="suite-param" value="suite level parameter" /> -->
-	
-	
-	<test name="Parameter Test one">
-	<parameter name="edureka-student" value="Divya"></parameter>
-	<parameter name="edureka-course" value="Selenium"></parameter>
+
+<suite name="suite1">
+	<test name="test1">
+		<parameter name="package_name" value="org.openqa.selenium"></parameter>
+		<parameter name="class_name" value="WebDriver"></parameter>
 		<classes>
-			<class name="com.c2t.testng.parameters.ParameterTest">
-				<methods>
-					<include name="prameterTestOne" />
-				</methods>
-			</class>
-		</classes>
-	</test> 
-		<!-- <test name="Testing for alphabets">
-		This parameter will be passed this test only
-		<parameter name="test-two-param" value="ABCDEF" />
-		<classes>
-			<class name="com.c2t.testng.parameters.ParameterTest">
-				<methods>
-					<include name="prameterTestTwo" />
-				</methods>
-			</class>
+
+			<class name="com.c2t.testng.parameters.ParameterTest"></class>
 		</classes>
 	</test>
-	
-	<test name="Testing for alphanumberic">
-		This parameter will be passed this test only
-		<parameter name="test-two-param" value="123456" />
-		<classes>
-			<class name="com.c2t.testng.parameters.ParameterTest">
-				<methods>
-					<include name="prameterTestTwo" />
-				</methods>
-			</class>
-		</classes>
-	</test> -->
-	<!-- <test name="Parameter Test three">
-		Overriding suite level parameter
-		<parameter name="suite-param" value="overiding suite parameter" />
-		Test specific parameter
-		<parameter name="test-three-param" value="test three parameter" />
-		<classes>
-			<class name="com.c2t.testng.parameters.ParameterTest">
-				<methods>
-					<include name="prameterTestThree" />
-				</methods>
-			</class>
-		</classes>
-	</test> -->
 </suite>

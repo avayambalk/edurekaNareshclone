@@ -21,7 +21,7 @@ import java.net.URL;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class NodeFireFoxTest {
+public class GridNodeFireFoxTest {
 
 	public static WebDriver driver;
 	static String baseUrl;
@@ -31,7 +31,7 @@ public class NodeFireFoxTest {
 	public static void setUp() throws MalformedURLException {
 
 		baseUrl = "file:///D:/nchaurasia/Automation-Architect/connect2tech.in-SeleniumWebDriver3.x_2/src/test/java/com/c2t/frame/ParentFrame.html";
-		nodeUrl = "http://localhost:5555/wd/hub";
+		nodeUrl = "http://localhost:4444/wd/hub";
 
 		DesiredCapabilities capability = DesiredCapabilities.firefox();
 
