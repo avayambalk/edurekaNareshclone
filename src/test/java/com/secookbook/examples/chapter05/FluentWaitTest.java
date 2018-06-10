@@ -17,18 +17,16 @@ import com.google.common.base.Function;
 import com.google.common.base.Predicate;
 
 public class FluentWaitTest {
-	
 
 	@Test
 	public void testFluentWait() {
-		
-		/*Function<String, Integer> lengthFunction = new Function<String, Integer>() {
-			  public Integer apply(String string) {
-			    return string.length();
-			  }
-			};*/
-		
-		
+
+		/*
+		 * Function<String, Integer> lengthFunction = new Function<String,
+		 * Integer>() { public Integer apply(String string) { return
+		 * string.length(); } };
+		 */
+
 		WebDriver driver = new ChromeDriver();
 		// Launch the sample Ajax application
 		driver.get("http://cookbook.seleniumacademy.com/AjaxDemo.html");
@@ -36,18 +34,18 @@ public class FluentWaitTest {
 		try {
 			driver.findElement(By.linkText("Page 4")).click();
 
-			Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
-					.withTimeout(10, TimeUnit.SECONDS)
-					.pollingEvery(2, TimeUnit.SECONDS)
-					.ignoring(NoSuchElementException.class);
+			Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(10, TimeUnit.SECONDS)
+					.pollingEvery(2, TimeUnit.SECONDS).ignoring(NoSuchElementException.class);
 
-			WebElement message = wait
-					.until(new Function<WebDriver, WebElement>() {
-						public WebElement apply(WebDriver d) {
-							WebElement we = d.findElement(By.id("pageContent"));
-							return we;
-						}
-					});
+			// https://google.github.io/guava/releases/20.0/api/docs/com/google/common/base/Function.html
+			// apply(F input) Returns the result of applying this function to
+			// input.
+			WebElement message = wait.until(new Function<WebDriver, WebElement>() {
+				public WebElement apply(WebDriver d) {
+					WebElement we = d.findElement(By.id("pageContent"));
+					return we;
+				}
+			});
 
 			assertTrue(message.getText().contains("Nunc nibh tortor"));
 		} finally {
@@ -55,5 +53,4 @@ public class FluentWaitTest {
 		}
 	}
 
-	
 }

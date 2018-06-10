@@ -4,7 +4,7 @@ public class SeleniumUtil {
 
 	public static String getRootDir() {
 		String rootDir = System.getProperty("user.dir");
-		//System.out.println("rootDir--------------" + rootDir);
+		System.out.println("rootDir--------------" + rootDir);
 		rootDir = rootDir.replace('\\', '/');
 		String dir = "file:///" + rootDir + "/" + "src/main/resources/";
 		//System.out.println("dir---------------->" + dir);

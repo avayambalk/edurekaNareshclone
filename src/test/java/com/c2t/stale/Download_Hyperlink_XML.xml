@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Download_Hyperlinks">
+	<test name="Download_Test">
+		<parameter name="Tab_Options" value="Testing"></parameter>
+		<parameter name="Course_Option" value="Selenium"></parameter>
+		<classes>
+			<class name="com.c2t.stale.Download_Hyperlinks"></class>
+		</classes>
+	</test>
+</suite>

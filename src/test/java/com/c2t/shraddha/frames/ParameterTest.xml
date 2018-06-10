@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="New test Suite" parallel="classes" thread-count="2" verbose="1">
+<test name="Use Case @ Frames">
+	 <parameter name="Button" value="Frames"/>
+	 <parameter name="FilePath" value="F://SeleniumClasses/FinalSeleniumProject/selenium_project/MyExcel.xlsx"/>
+	 <parameter name="PackageName" value="org.openqa.selenium.ie"/>
+	 <parameter name="BottomFrameValue" value="InternetExplorerDriver"/>
+		<classes>
+			<class name="com.myproject.app.NewTest">
+			</class>
+		</classes>
+	</test>  	
+</suite>
