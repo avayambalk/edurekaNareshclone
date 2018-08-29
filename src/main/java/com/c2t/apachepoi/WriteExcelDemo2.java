@@ -27,11 +27,11 @@ public class WriteExcelDemo2 {
 		};
 		
 
-		for(int rowCount=0;rowCount<data.length;rowCount++){
+		for(int rowCount=0;rowCount<3;rowCount++){
 			Row row = sheet.createRow(rowCount);
 			
 
-			for(int colCount=0;colCount < data[rowCount].length;colCount++){
+			for(int colCount=0;colCount < 2;colCount++){
 				Cell cell = row.createCell(colCount);
 				cell.setCellValue(data[rowCount][colCount]);
 			}

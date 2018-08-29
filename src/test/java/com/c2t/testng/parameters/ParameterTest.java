@@ -1,5 +1,6 @@
 package com.c2t.testng.parameters;
 
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -9,10 +10,18 @@ public class ParameterTest {
 	 * Following method takes one parameter as input. Value of the said
 	 * parameter is defined at suite level.
 	 */
+	
+	@Parameters({"val1","class_name"})
+	@BeforeClass
+	public void before(String param1, String param2) {
+		System.out.println("before:" + param1);
+		System.out.println("before:" + param2);
+	}
 
-	@Parameters({"package_name","class_name"})
+	@Parameters({"val1","class_name"})
 	@Test
 	public void prameterTestOne(String param1, String param2) {
+		
 		System.out.println("Test one suite param1 is: " + param1);
 		System.out.println("Test one suite param2 is: " + param2);
 	}

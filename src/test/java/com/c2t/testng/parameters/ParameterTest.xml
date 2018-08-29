@@ -3,10 +3,9 @@
 
 <suite name="suite1">
 	<test name="test1">
-		<parameter name="package_name" value="org.openqa.selenium"></parameter>
+		<parameter name="val1" value="hello"></parameter>
 		<parameter name="class_name" value="WebDriver"></parameter>
 		<classes>
-
 			<class name="com.c2t.testng.parameters.ParameterTest"></class>
 		</classes>
 	</test>

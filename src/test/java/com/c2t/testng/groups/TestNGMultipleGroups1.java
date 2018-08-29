@@ -1,9 +1,16 @@
 package com.c2t.testng.groups;
 
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class TestNGMultipleGroups1 {
-	@Test(groups = { "sanity" })
+	
+	@BeforeTest
+	public void m1(){
+		System.out.println("Hello...");
+	}
+	
+	@Test(priority=2, groups={"sanity"})
 	public void testMethodOne() {
 		System.out.println("com.c2t.testng.groups.TestNGMultipleGroups1.testMethodOne()/sanity");
 	}
@@ -13,7 +20,7 @@ public class TestNGMultipleGroups1 {
 		System.out.println("com.c2t.testng.groups.TestNGMultipleGroups1.testMethodTwo()/sanity/regression");
 	}
 
-	@Test(groups = { "regression" })
+	@Test(priority=1, groups = { "sanity" })
 	public void testMethodThree() {
 		System.out.println("com.c2t.testng.groups.TestNGMultipleGroups1.testMethodThree()/regression");
 	}

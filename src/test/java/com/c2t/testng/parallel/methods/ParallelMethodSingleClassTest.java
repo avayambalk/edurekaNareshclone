@@ -3,8 +3,6 @@ package com.c2t.testng.parallel.methods;
 import org.testng.annotations.Test;
 
 public class ParallelMethodSingleClassTest {
-	
-	
 
 	@Test
 	public void testMethodsOne() {

@@ -4,12 +4,12 @@ import org.testng.annotations.Test;
 
 public class TestNg1 {
 
-	@Test(enabled=true)
+	@Test(enabled=false)
 	public void test1(){
 		System.out.println("Hello");
 	}
 	
-	@Test(invocationCount=4)
+	@Test
 	public void test(){
 		System.out.println("Hello");
 	}

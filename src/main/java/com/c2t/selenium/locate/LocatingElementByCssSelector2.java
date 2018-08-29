@@ -30,7 +30,7 @@ public class LocatingElementByCssSelector2 {
 		
 		//findByCssSelector_absolute();	
 		//findByCssSelector_Tag_Class();
-		//findByCssSelector_Class();
+		findByCssSelector_Class();
 		//findByCssSelector_Tag_Id();
 		//findByCssSelector_Attribute();
 //		findByCssSelector1();
@@ -44,6 +44,16 @@ public class LocatingElementByCssSelector2 {
 		
 		
 //		findByCssSelector8();
+		
+		//findByCssSelectorId();
+	}
+	
+	static void findByCssSelectorId() {
+		WebElement we = driver.findElement(By.cssSelector("#fname"));
+		we.clear();
+		we.sendKeys("css selector...");
+		
+		
 	}
 	
 	static void findByCssSelector8() {
@@ -101,7 +111,7 @@ public class LocatingElementByCssSelector2 {
 	}
 	
 	static void findByCssSelector_Tag_Class() {
-		WebElement we = driver.findElement(By.cssSelector("input.w3-input"));
+		WebElement we = driver.findElement(By.cssSelector("input#fname"));
 		System.out.println("we = "+we);
 		we.clear();
 		we.sendKeys("Bell the mouse");

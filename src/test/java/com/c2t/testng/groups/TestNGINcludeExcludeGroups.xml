@@ -15,16 +15,6 @@
 		</classes>
 	</test>
 	
-<!-- 	<test name="Regression Test">
-		<groups>
-			<run>
-				<include name="regression" />
-			</run>
-		</groups>
-		<classes>
-			<class name="com.c2t.testng.groups.TestNGIncludeExcludeGroups" />
-			
-		</classes>
-	</test> -->
+
 </suite>
 

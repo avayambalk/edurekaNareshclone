@@ -29,7 +29,7 @@ public class LocatingElementByCssSelector {
 		launchBrowser();
 		
 		
-//		findByCssSelector1();
+		findByCssSelector1();
 //		findByCssSelector2();
 //		findByCssSelector3();
 //		findByCssSelector4();

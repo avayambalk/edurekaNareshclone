@@ -37,15 +37,13 @@ public class Frames {
 			String sourceTop = driver.getPageSource();
 			System.out.println(sourceTop);
 			
-			System.out.println("-------------------------------------------------");
 			
-			
-			driver.switchTo().defaultContent();
+			/*driver.switchTo().defaultContent();
 			String sourceParent = driver.getPageSource();
 			System.out.println(sourceParent);
+			*/
 			
-			
-			driver.switchTo().frame("main");
+			/*driver.switchTo().frame("main");
 			String sourceMain = driver.getPageSource();
 			System.out.println(sourceMain);
 			
@@ -55,7 +53,7 @@ public class Frames {
 			driver.switchTo().defaultContent();
 			sourceParent = driver.getPageSource();
 			System.out.println(sourceParent);
-			
+			*/
 	}
 	
 
@@ -63,7 +61,7 @@ public class Frames {
 	@Test
 	public void testFrameByIndex() {
 		// Activate the frame in middle using it's index. Index starts at 0
-		driver.switchTo().frame(10);
+		driver.switchTo().frame(0);
 
 		String sourceTop = driver.getPageSource();
 		System.out.println(sourceTop);

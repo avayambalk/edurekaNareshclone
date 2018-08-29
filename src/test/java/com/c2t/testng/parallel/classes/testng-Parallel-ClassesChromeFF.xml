@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Test-class Suite" parallel="classes" thread-count="1" >
-  <test name="Test-class test" >
-    <classes>
-      <class name="com.c2t.testng.parallel.classes.ParallelClassesTestOneFF" />
-      <class name="com.c2t.testng.parallel.classes.ParallelClassesTestTwoChrome" />
-    </classes>
-  </test>
+<suite name="Test-class Suite" parallel="classes" thread-count="2">
+	<test name="Test-class test">
+		<parameter name="browser" value="FF"></parameter>
+		<classes>
+			<class name="com.c2t.testng.parallel.classes.ParallelClassesTestOneFF" />
+		</classes>
+	</test>
+
+	<test name="Test-class test2">
+		<parameter name="browser" value="FF"></parameter>
+		<classes>
+			<class name="com.c2t.testng.parallel.classes.ParallelClassesTestOneFF" />
+		</classes>
+	</test>
+
 </suite>

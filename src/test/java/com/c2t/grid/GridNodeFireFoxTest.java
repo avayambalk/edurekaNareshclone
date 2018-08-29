@@ -4,6 +4,7 @@ import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.BrowserType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
@@ -31,15 +32,15 @@ public class GridNodeFireFoxTest {
 	public static void setUp() throws MalformedURLException {
 
 		baseUrl = "file:///D:/nchaurasia/Automation-Architect/connect2tech.in-SeleniumWebDriver3.x_2/src/test/java/com/c2t/frame/ParentFrame.html";
-		nodeUrl = "http://localhost:4444/wd/hub";
+		nodeUrl = "http://192.168.42.189:4444/wd/hub";
 
 		DesiredCapabilities capability = DesiredCapabilities.firefox();
 
 		// Information for node.
 		capability.setBrowserName("firefox");
-		capability.setVersion("45.5.1");
+		capability.setVersion("3.9.1");
 		capability.setPlatform(Platform.WIN10);
-		URL url = new URL(nodeUrl);
+		URL url = new URL("http://192.168.42.189:5566/wd/hub");
 		driver = new RemoteWebDriver(url, capability);
 		System.setProperty("webdriver.firefox.marionette", "geckodriver.exe");
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);

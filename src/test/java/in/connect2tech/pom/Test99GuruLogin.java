@@ -17,21 +17,25 @@ public class Test99GuruLogin {
 	Guru99Login objLogin;
 	Guru99HomePage objHomePage;
 	
-	Map m = new HashMap();
 
 	@BeforeTest
 	public void setup() {
 		System.setProperty("webdriver.firefox.marionette", "geckodriver.exe");
 		driver = new FirefoxDriver();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get("http://demo.guru99.com/V4/");
 		objLogin = new Guru99Login(driver);
 		
 		//fuction to read error messages.
 	}
 	
+	@Test(priority = -2)
+	public void login(){
+		objLogin.loginToGuru99("abc", "def");
+	}
 	
-	@Test(priority = -1)
+	
+	/*@Test(priority = -1, enabled=false)
 	public void clearTextBoxes() {
 		//objLogin.setFieldValues("Lavanya", "password");
 		objLogin.resetIdPassword();
@@ -40,14 +44,14 @@ public class Test99GuruLogin {
 		String valUserId = objLogin.fetchUserIdValue();
 		Assert.assertEquals("", valUserId);
 	
-	}
+	}*/
 		
 	/**
 	 * This test case will login in http://demo.guru99.com/V4/ Verify login page
 	 * title as guru99 bank Login to application Verify the home page using
 	 * Dashboard message
 	 */
-	@Test(priority = 0)
+	@Test(priority = 0, enabled=true)
 	public void test_Home_Page_Appear_Correct() {
 		// Create Login Page object
 		
@@ -55,14 +59,14 @@ public class Test99GuruLogin {
 		String loginPageTitle = objLogin.getLoginTitle();
 		Assert.assertTrue(loginPageTitle.toLowerCase().contains("guru99 bank"));
 		// login to application
-		objLogin.loginToGuru99("mngr98666", "anahEpy");
+		objLogin.loginToGuru99("mngr145670", "sadAbEr");
 		// go the next page
 		objHomePage = new Guru99HomePage(driver);
 		// Verify home page
 		Assert.assertTrue(objHomePage.getHomePageDashboardUserName().toLowerCase().contains("Manger Id : mngr98666"));
 	}
 	
-	@Test(priority = 1)
+	@Test(priority = 1, enabled=false)
 	public void test_Err_Msg_UserName() {
 		String errUserName = objLogin.getUserNameErrorMsgs();
 		Assert.assertEquals(errUserName, "Error Msg");

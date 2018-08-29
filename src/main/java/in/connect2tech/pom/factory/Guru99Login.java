@@ -40,7 +40,7 @@ public class Guru99Login {
 		driver = driver1;
 		// This initElements method will create all WebElements
 		System.out.println("this="+this);
-		PageFactory.initElements(driver1, this);
+		PageFactory.initElements(driver, this);
 	}
 	
 	/*public void loginGuru99(){

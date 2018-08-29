@@ -31,25 +31,47 @@ public class ReadExcelDemo {
 		// Row row = rowIterator.next();
 		// Iterator<Cell> cellIterator = row.cellIterator();
 		
-		File file = new File("D:/nchaurasia/Automation-Architect/connect2tech.in-SeleniumWebDriver3.x_2/howtodoinjava_out.xlsx");
-		FileInputStream fis = new FileInputStream(file);
+		File f = new File("DDT.xlsx");
+		FileInputStream fis = new FileInputStream(f);
 		XSSFWorkbook workbook = new XSSFWorkbook(fis);
-		XSSFSheet sheet = workbook.getSheet("Employee Data");
+		XSSFSheet  sheet = workbook.getSheet("Employee Data");
+		Iterator<Row> rows = sheet.iterator();
+		
+		while(rows.hasNext()){
+			Row row = rows.next();
+			
+			Iterator<Cell>  cells = row.cellIterator();
+			
+			while(cells.hasNext()){
+				Cell c = cells.next();
+				System.out.println("c="+c);
+			}
+		}
+		
+		
+		/*File f = new File("DDT.xlsx");
+		FileInputStream fis = new FileInputStream(f);
+		XSSFWorkbook workbook = new XSSFWorkbook(fis);
+		
+		XSSFSheet sheet = workbook.getSheetAt(0);
+		System.out.println(sheet.getSheetName());
 		Iterator<Row> rows = sheet.iterator();
 		
 		while(rows.hasNext()){
 			
-			Row row = rows.next();
-			Iterator<Cell>  cells = row.cellIterator();
+			Row r = rows.next();
+			
+			
+			Iterator<Cell> cells = r.iterator();
 			
 			while(cells.hasNext()){
 				Cell cell = cells.next();
-				System.out.print(cell + "	");
+				System.out.println(cell);
 			}
-			
-			System.out.println();
-			
-		}
-
+			 
+		}*/
+		
+		
+	
 	}
 }

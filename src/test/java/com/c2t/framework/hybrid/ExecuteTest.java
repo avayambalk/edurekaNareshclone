@@ -29,7 +29,7 @@ public class ExecuteTest {
 		object = new ReadObject();
 		allObjects = object.getObjectRepository();
 	}
-
+	
 	@Test
 	public void testLogin() throws Exception {
 		

@@ -7,7 +7,7 @@ import org.sikuli.script.Pattern;
 import org.sikuli.script.Screen;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class SikuliDemo2 {
+public class SikuliDemoChromeWorking {
 
 	public static void main(String[] args) throws FindFailed {
 
@@ -24,8 +24,11 @@ public class SikuliDemo2 {
 		driver.findElement(By.xpath(".//*[@id='photoimg']")).click();
 
 		s.wait(fileInputTextBox,5);
-		s.type(fileInputTextBox,"Maven.txt");
+		//s.type(fileInputTextBox,"C:\\Users\\naresh\\Pictures\\Youtube\\c2t home page-python.PNG");
+		s.type(fileInputTextBox,"C:\\Users\\naresh\\Desktop\\intern.txt");
+		//C:\Users\naresh\Desktop
 		s.click(openButton);
+		
 		
 	}
 

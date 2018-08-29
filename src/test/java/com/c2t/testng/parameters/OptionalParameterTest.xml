@@ -9,7 +9,9 @@
   <test name="Optional Test two">
     <parameter name="optional-value" value="passed from xml" />
     <classes>
-      <class name="com.c2t.testng.parameters.OptionalParameterTest" />
+      <class name="com.c2t.testng.parameters.OptionalParameterTest">
+      
+      </class>
     </classes>
   </test>
 </suite>

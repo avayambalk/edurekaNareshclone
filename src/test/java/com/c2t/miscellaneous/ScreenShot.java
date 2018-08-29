@@ -39,7 +39,7 @@ public class ScreenShot {
 	    long time = new Date().getTime();
 	    
 	    
-			FileUtils.copyFile(screenShot, new File("d:/screen-"+time+".jpg"));
+	     FileUtils.copyFile(screenShot, new File("screen.jpg"));
 		
 		
 	}

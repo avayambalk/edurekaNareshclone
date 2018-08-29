@@ -30,33 +30,55 @@ public class HandlingPopup2 {
 	@Test
 	public void popUp() {
 		// Launching the site.
-		
-	
-		//String MainWindow = driver.getWindowHandle();
+
+		// String MainWindow = driver.getWindowHandle();
 		// To handle all new opened window.
-		//Set<String> s1 = driver.getWindowHandles();
-		//driver.switchTo().window(ChildWindow);
+		// Set<String> s1 = driver.getWindowHandles();
+		// driver.switchTo().window(ChildWindow);
 		
+		driver.findElement(By.linkText("Click Here")).click();
 		String parent = driver.getWindowHandle();
-		
-		WebElement we = driver.findElement(By.linkText("Click Here"));
-		we.click();
-		
-		Set<String> windows = driver.getWindowHandles();	
+		Set <String> windows = driver.getWindowHandles();
 		
 		Iterator<String> iter = windows.iterator();
 		
 		while(iter.hasNext()){
-			String window= iter.next();
-			if(!window.equals(parent)){
+			String window = iter.next();
+			if(!parent.equals(window)){
 				driver.switchTo().window(window);
 				
-				driver.findElement(By.name("emailid")).sendKeys("Hello");
+				driver.findElement(By.name("btnLogin")).click();
+				driver.close();
+				
 			}
 		}
 		
-		driver.switchTo().window(parent);
+		
+		
+		String title = driver.getTitle();
+		System.out.println(title);
+		
+		/*driver.findElement(By.linkText("Click Here")).click();
+		 * 
+		 * 
+		 * 
+
+		String parent = driver.getWindowHandle();
+		Set<String> windows = driver.getWindowHandles();
+		
+		Iterator<String>  iter = windows.iterator();
+		while(iter.hasNext()){
+			String s = iter.next();
+			
+			if(s.equals(parent)){
+				
+			}else{
+				driver.switchTo().window(s);
+			}
+		}*/
+		
+		
 		
 	}
 
-	}
+}

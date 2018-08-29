@@ -1,1 +1,1 @@
-java -cp lib/*;target/test-classes org.testng.TestNG src/test/java/com/c2t/testng/parallel/classes/testng-Parallel-Classes.xml
+java -cp lib/*;target/test-classes org.testng.TestNG "D:\nchaurasia\Automation-Architect\connect2tech.in-SeleniumWebDriver3.x_2\src\test\java\com\c2t\testng\parallel\classes\testng-Parallel-Classes.xml"

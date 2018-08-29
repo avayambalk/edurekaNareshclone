@@ -1,6 +1,9 @@
 package com.c2t.grid;
 
 import org.testng.annotations.Test;
+
+import com.gargoylesoftware.htmlunit.javascript.configuration.BrowserName;
+
 import org.testng.annotations.BeforeMethod;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -21,7 +24,7 @@ import java.net.URL;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class NodeChromeTesGridt {
+public class FFGrid {
 
 	public static WebDriver driver;
 	static String baseUrl;
@@ -30,11 +33,11 @@ public class NodeChromeTesGridt {
 	@BeforeClass
 	public static void setUp() throws MalformedURLException {
 
-		baseUrl = "https://selenium-release.storage.googleapis.com/index.html?path=3.9/";
-		nodeUrl = "http://localhost:4444/wd/hub";
+		baseUrl = "https://www.facebook.com/";
+		nodeUrl = "http://localhost:5555/wd/hub";
 		
-		DesiredCapabilities capabilities = DesiredCapabilities.chrome();
-		capabilities.setBrowserName("chrome");
+		DesiredCapabilities capabilities = DesiredCapabilities.firefox();
+		capabilities.setBrowserName("firefox");
 		capabilities.setPlatform(Platform.WIN10);
 		
 		URL url = new URL(nodeUrl);
@@ -45,7 +48,6 @@ public class NodeChromeTesGridt {
 		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 
 		driver.get(baseUrl);
-		driver.manage().window().maximize();
 	}
 
 	@Test

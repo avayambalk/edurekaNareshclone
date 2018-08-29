@@ -1,18 +1,16 @@
 package com.c2t.alerts;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriver.TargetLocator;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Alert;
-
-
-import static org.junit.Assert.*;
 
 public class AlertsTest {
 
@@ -36,6 +34,9 @@ public class AlertsTest {
 	public void testSimpleAlert() {
 		// Click Simple button to show an Alert box
 		driver.findElement(By.id("simple")).click();
+		
+		TargetLocator target = driver.switchTo();
+		Alert al = target.alert();
 	
 		// Optionally we can also wait for an Alert box using the WebDriverWait
 		/*new WebDriverWait(driver, 10)
@@ -48,7 +49,7 @@ public class AlertsTest {
 		String textOnAlert = alert.getText();
 
 		// Check correct message is displayed to the user on Alert box
-		assertEquals("Hello! I am an alert box!", textOnAlert);
+		Assert.assertEquals("Hello! I am an alert box!", textOnAlert);
 
 		// Click OK button, by calling accept method
 		alert.accept();
@@ -68,7 +69,7 @@ public class AlertsTest {
 
 		// Check Page displays correct message
 		WebElement message = driver.findElement(By.id("demo"));
-		assertEquals("You Accepted Alert!", message.getText());
+		Assert.assertEquals("You Accepted Alert!", message.getText());
 	}
 
 	@Test
@@ -84,7 +85,7 @@ public class AlertsTest {
 
 		// Check Page displays correct message
 		WebElement message = driver.findElement(By.id("demo"));
-		assertEquals("You Dismissed Alert!", message.getText());
+		Assert.assertEquals("You Dismissed Alert!", message.getText());
 	}
 
 	@Test
@@ -103,7 +104,7 @@ public class AlertsTest {
 
 		// Check Page displays message with value entered in Prompt
 		WebElement message = driver.findElement(By.id("prompt_demo"));
-		assertEquals("Hello Foo! How are you today?", message.getText());
+		Assert.assertEquals("Hello Foo! How are you today?", message.getText());
 	}
 
 	@AfterClass

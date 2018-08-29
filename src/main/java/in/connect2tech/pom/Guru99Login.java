@@ -16,8 +16,9 @@ public class Guru99Login {
 
 	// Set user name in textbox
 	public void setUserName(String strUserName) {
-		driver.findElement(user99GuruName).sendKeys(strUserName);
+		driver.findElement(By.name("uid1")).sendKeys(strUserName);
 	}
+	
 	
 	public String getUserNameErrorMsgs() {
 		return "User Cannot be blank";
@@ -70,11 +71,11 @@ public class Guru99Login {
 	 */
 	public void loginToGuru99(String strUserName, String strPasword) {
 		// Fill user name
-		this.setUserName(strUserName);
+		setUserName(strUserName);
 		// Fill password
-		this.setPassword(strPasword);
+		setPassword(strPasword);
 		// Click Login button
-		this.clickLogin();
+		clickLogin();
 	}
 	
 	public void setFieldValues(String strUserName, String strPasword){

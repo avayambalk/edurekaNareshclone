@@ -29,6 +29,8 @@ public class MouseEventsFb {
 	@Test(priority = 2, enabled = true)
 	public void testBuildingSeriesOfMultipleActions1() {
 		WebElement txtUsername = driver.findElement(By.id("email"));
+		
+		
 		Actions actions = new Actions(driver);
 		Action action = actions.moveToElement(txtUsername).click().
 				keyDown(txtUsername, Keys.SHIFT).

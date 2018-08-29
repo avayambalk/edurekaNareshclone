@@ -36,31 +36,29 @@ public class HandlingPopup {
 		
 		
 		driver.findElement(By.linkText("Click Here")).click();
-		String MainWindow = driver.getWindowHandle();
-
-		// To handle all new opened window.
-		Set<String> s1 = driver.getWindowHandles();
-		Iterator<String> i1 = s1.iterator();
-
-		while (i1.hasNext()) {
-			String ChildWindow = i1.next();
-
-			if (!MainWindow.equalsIgnoreCase(ChildWindow)) {
-
-				// Switching to Child window
-				driver.switchTo().window(ChildWindow);
-				driver.findElement(By.name("emailid")).sendKeys(
-						"gaurav.3n@gmail.com");
-				pause();
+		
+		
+		String parent = driver.getWindowHandle();
+		Set <String>windows = driver.getWindowHandles();
+		
+		Iterator <String> iter = windows.iterator();
+		
+		while(iter.hasNext()){
+			String window = iter.next();
+			
+			if(window.equals(parent)){
+				
+			}else{
+				driver.switchTo().window(window);
+				driver.findElement(By.name("emailid")).sendKeys("hello");
 				driver.findElement(By.name("btnLogin")).click();
-				pause();
-				// Closing the Child Window.
-				driver.close();
+				//driver.close();
+				
 			}
+			
 		}
-		// Switching to Parent window i.e Main Window.
-		driver.switchTo().window(MainWindow);
-		driver.close();
+		
+		//driver.switchTo().window(parent);
 
 	}
 

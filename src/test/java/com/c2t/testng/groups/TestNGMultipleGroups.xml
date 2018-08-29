@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="TestNGMultipleGroups Suite1" verbose="1">
-	<test name="TestNGMultipleGroups Test1">
+
+
+<suite name="suite1">
+	<test name="test1">
 		<groups>
 			<run>
-				<exclude name="regression"/>
-				<exclude name="sanity"/>
+				<exclude name="regression" />
+				<include name="sanity" />
 			</run>
 		</groups>
 		<classes>
-			<class name="com.c2t.testng.groups.TestNGMultipleGroups1" />
-			<!-- <class name="com.c2t.testng.groups.TestNGMultipleGroups2" /> -->
+			<class name="com.c2t.testng.groups.TestNGMultipleGroups1"></class>
 		</classes>
 	</test>
 </suite>

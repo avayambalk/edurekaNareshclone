@@ -8,7 +8,7 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 @Listeners(ITestListenerImpl.class)
-public class ITestListenerTc {
+public class TestCases {
 	
 	WebDriver driver;
 	

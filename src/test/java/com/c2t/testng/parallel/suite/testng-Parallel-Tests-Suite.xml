@@ -1,16 +1,27 @@
 <!-- each test in a suite is executed in its respective thread -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite name="Test-class Suite" parallel="tests" thread-count="2">
 	<test name="Test-class test 1">
 		<parameter name="test-name" value="test-method Two" />
 		<classes>
-			<class name="com.c2t.testng.parallel.suite.ParallelSuiteTest" />
+		
+			
+		
+		
+			<class name="com.c2t.testng.parallel.suite.ParallelSuiteTest" >
+			<methods>
+			<exclude name=""></exclude>
+			</methods>
+			
+			</class>
 		</classes>
 	</test>
-	<test name="Test-class test 2">
+	<!-- <test name="Test-class test 2">
 		<parameter name="test-name" value="test-method One" />
 		<classes>
 			<class name="com.c2t.testng.parallel.suite.ParallelSuiteTest" />
 		</classes>
-	</test>
+	</test> -->
 </suite>
