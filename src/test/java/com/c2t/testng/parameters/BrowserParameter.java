@@ -3,10 +3,12 @@ package com.c2t.testng.parameters;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+
 
 public class BrowserParameter {
 	WebDriver driver;
@@ -28,7 +30,19 @@ public class BrowserParameter {
 
 	@Test
 	public void prameterTestOne() {
+		
+		String expectedTitle = "Google1";
+		
 		driver.get("https://google.com");
+		String actualTitle = driver.getTitle();
+		Assert.assertEquals(actualTitle, expectedTitle, "The title do not match!!!");
+		
+		driver.close();
+	}
+	
+
+	@Test
+	public void prameterTestTwo() {
 		
 	}
 
