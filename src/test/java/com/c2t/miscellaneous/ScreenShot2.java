@@ -16,7 +16,7 @@ import java.util.Date;
 
 public class ScreenShot2 {
 
-	public static WebDriver driver;
+	public static FirefoxDriver driver;
 
 	private static String URL = "https://www.google.co.in/?gfe_rd=cr&dcr=0&ei=UrWLWr7TBaycX_C9l8AC&gws_rd=ssl";
 
@@ -31,10 +31,14 @@ public class ScreenShot2 {
 	@Test
 	public void testWindowUsingName1() throws IOException {
 
-		TakesScreenshot screen = (TakesScreenshot)driver;
-		File f = screen.getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(f, new File("d:/screenshot.jpg"));
+		//TakesScreenshot screen = (TakesScreenshot)driver;
+		File f = driver.getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(f, new File("d:/screenshot.jpg" ));
 
+	}
+	
+	public void takeScreenShot(){
+		
 	}
 
 }

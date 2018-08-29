@@ -7,7 +7,8 @@
 	<test name="Sanity Test">
 		<groups>
 			<run>
-				<include name="sanity" />
+				<include name="sanity"/>
+				<exclude name="regression"/>
 			</run>
 		</groups>
 		<classes>
