@@ -16,7 +16,7 @@ import org.openqa.selenium.interactions.Actions;
 
 public class MouseEventsFb {
 
-	WebDriver driver = null;
+	WebDriver driver;
 
 	@BeforeTest
 	public void beforeTest() {

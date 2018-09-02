@@ -14,9 +14,9 @@ public class MyTCListener2 implements ITestListener{
 
 	@Override
 	public void onTestSuccess(ITestResult result) {
-		//System.out.println("how r u...");
-		//Send out mail.
-		//Take screen shot..
+		// TODO Auto-generated method stub
+		
+		System.out.println("hello..");
 		
 	}
 
@@ -49,5 +49,4 @@ public class MyTCListener2 implements ITestListener{
 		// TODO Auto-generated method stub
 		
 	}
-	
 }

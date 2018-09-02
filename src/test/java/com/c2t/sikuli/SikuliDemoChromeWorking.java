@@ -29,7 +29,6 @@ public class SikuliDemoChromeWorking {
 		//C:\Users\naresh\Desktop
 		s.click(openButton);
 		
-		
 	}
 
 }

@@ -38,8 +38,10 @@ public class AutoITTestFF {
 		WebElement we = driver.findElement(By.name("datafile"));
 		System.out.println(we);
 		we.click();
+		
+		
 		try {
-			Runtime.getRuntime().exec("D:/nchaurasia/Automation-Architect/AutoIT/FileUpload-1.exe");
+			Runtime.getRuntime().exec("D:/nchaurasia/Automation-Architect/AutoIT/FileUploadSelenium.exe");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

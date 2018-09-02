@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
  * @YouTubeChannel: https://goo.gl/c7FAsq
  */
 
-@Listeners(MyTCListener.class)
+@Listeners(MyTCListener2.class)
 public class MyTC {
 	
 	@Test
