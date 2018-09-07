@@ -33,8 +33,8 @@ public class ExplicitWait {
 			driver.get(baseUrl);
 			
 			WebDriverWait wait = new WebDriverWait(driver, 2);
-			//wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.name("theButton"))));
-			wait.until(ExpectedConditions.titleContains("value"));
+			wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.name("theButton"))));
+			//wait.until(ExpectedConditions.titleContains("value"));
 			
 			
 			/*WebDriverWait wait = new WebDriverWait(driver, 5);

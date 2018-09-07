@@ -28,10 +28,8 @@ public class ImplicitWait {
 		try {
 			System.setProperty("webdriver.firefox.marionette", "geckodriver.exe");
 			driver = new FirefoxDriver();
-			
 			driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 			
-			//driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 			String baseUrl = "file:///D:/nchaurasia/Automation-Architect/connect2tech.in-SeleniumWebDriver3.x_2/src/main/resources/LocatingMultipleElements.html";
 			driver.get(baseUrl);
 

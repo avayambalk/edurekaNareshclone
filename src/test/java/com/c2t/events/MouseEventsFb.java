@@ -30,8 +30,19 @@ public class MouseEventsFb {
 	public void testBuildingSeriesOfMultipleActions1() {
 		WebElement txtUsername = driver.findElement(By.id("email"));
 		
-		
 		Actions actions = new Actions(driver);
+		
+		
+		/*
+		
+		Actions actions1 = actions.moveToElement(txtUsername);
+		Actions actions2 = actions1.click();
+		Actions actions3 = actions2.keyDown(Keys.SHIFT);
+		Actions actions4 = actions3.sendKeys("email");
+		Actions actions5 = actions4.doubleClick();
+		Action action = actions5.build();
+		action.perform();*/
+		
 		Action action = actions.moveToElement(txtUsername).click().
 				keyDown(txtUsername, Keys.SHIFT).
 		sendKeys(txtUsername, "hello").doubleClick().build();
