@@ -43,11 +43,7 @@ public class MouseEventsFb {
 		Action action = actions5.build();
 		action.perform();*/
 		
-		Action action = actions.moveToElement(txtUsername).click().
-				keyDown(txtUsername, Keys.SHIFT).
-		sendKeys(txtUsername, "hello").doubleClick().build();
-		action.perform();
-		
+				
 		Action action = actions.moveToElement(txtUsername).click().
 				keyDown(Keys.SHIFT).
 		sendKeys("hello").doubleClick().build();
