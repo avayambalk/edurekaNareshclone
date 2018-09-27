@@ -1,16 +1,16 @@
-package in.connect2tech.pom;
+package com.c2t.pom;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class Guru99Login {
+public class LoginPOM {
 	WebDriver driver;
 	By user99GuruName = By.name("uid1");
 	By password99Guru = By.name("password");
 	By titleText = By.className("barone");
 	By login = By.name("btnLogin");
 
-	public Guru99Login(WebDriver driver) {
+	public LoginPOM(WebDriver driver) {
 		this.driver = driver;
 	}
 

@@ -1,4 +1,4 @@
-package in.connect2tech.pom.factory;
+package com.c2t.pom.factory;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

@@ -1,4 +1,4 @@
-package in.connect2tech.pom;
+package com.c2t.pom;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

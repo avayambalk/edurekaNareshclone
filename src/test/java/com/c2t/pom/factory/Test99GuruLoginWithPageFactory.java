@@ -1,4 +1,4 @@
-package in.connect2tech.pom.factory;
+package com.c2t.pom.factory;
 
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
@@ -7,8 +7,8 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import in.connect2tech.pom.factory.Guru99HomePage;
-import in.connect2tech.pom.factory.Guru99Login;
+import com.c2t.pom.factory.Guru99HomePage;
+import com.c2t.pom.factory.Guru99Login;
 
 public class Test99GuruLoginWithPageFactory {
 	WebDriver driver;
@@ -19,6 +19,7 @@ public class Test99GuruLoginWithPageFactory {
 	public void setup() {
 		System.setProperty("webdriver.firefox.marionette", "geckodriver.exe");
 		driver = new FirefoxDriver();
+		objLogin = new Guru99Login(driver);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get("http://demo.guru99.com/V4/");
 	}
@@ -31,7 +32,7 @@ public class Test99GuruLoginWithPageFactory {
 	@Test(priority = 0)
 	public void test_Home_Page_Appear_Correct() {
 		// Create Login Page object
-		objLogin = new Guru99Login(driver);
+		
 		System.out.println("objLogin="+objLogin);
 		
 		// Verify login page title

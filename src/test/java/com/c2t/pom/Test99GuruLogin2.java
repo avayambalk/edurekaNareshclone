@@ -1,4 +1,4 @@
-package in.connect2tech.pom;
+package com.c2t.pom;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -9,12 +9,12 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import in.connect2tech.pom.Guru99HomePage;
-import in.connect2tech.pom.Guru99Login;
+import com.c2t.pom.Guru99HomePage;
+import com.c2t.pom.LoginPOM;
 
 public class Test99GuruLogin2 {
 	WebDriver driver;
-	Guru99Login objLogin;
+	LoginPOM objLogin;
 	Guru99HomePage objHomePage;
 	
 	Map m = new HashMap();
@@ -25,7 +25,8 @@ public class Test99GuruLogin2 {
 		driver = new FirefoxDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get("http://demo.guru99.com/V4/");
-		objLogin = new Guru99Login(driver);
+		objLogin = new LoginPOM(driver);
+		objHomePage = new Guru99HomePage(driver);
 		
 		//fuction to read error messages.
 	}
@@ -57,7 +58,7 @@ public class Test99GuruLogin2 {
 		// login to application
 		objLogin.loginToGuru99("mngr98666", "anahEpy");
 		// go the next page
-		objHomePage = new Guru99HomePage(driver);
+		
 		// Verify home page
 		Assert.assertTrue(objHomePage.getHomePageDashboardUserName().toLowerCase().contains("Manger Id : mngr98666"));
 	}

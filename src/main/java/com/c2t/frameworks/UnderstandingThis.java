@@ -9,7 +9,8 @@ class Student{
 	
 	public void display(){
 		System.out.println("name = " + name);
-		//System.out.println("this = " + this);
+		System.out.println("this = " + this);
+		System.out.println(this.name);
 		
 	}
 }
@@ -20,6 +21,7 @@ public class UnderstandingThis {
 		Student student = new Student();
 		student.display();
 		
-		System.out.println("student = " + student);
+		System.out.println("student="+student);
+		System.out.println(student.name);
 	}
 }

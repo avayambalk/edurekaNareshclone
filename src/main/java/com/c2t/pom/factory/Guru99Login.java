@@ -1,4 +1,4 @@
-package in.connect2tech.pom.factory;
+package com.c2t.pom.factory;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -19,7 +19,7 @@ public class Guru99Login {
 	
 	WebDriver driver;
 
-	@FindBy(name = "uid")
+	@FindBy (name = "uid")
 	WebElement user99GuruName;
 
 	@FindBy(name = "password")

@@ -1,4 +1,4 @@
-package in.connect2tech.pom;
+package com.c2t.pom;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -9,12 +9,12 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import in.connect2tech.pom.Guru99HomePage;
-import in.connect2tech.pom.Guru99Login;
+import com.c2t.pom.Guru99HomePage;
+import com.c2t.pom.LoginPOM;
 
 public class Test99GuruLogin {
 	WebDriver driver;
-	Guru99Login objLogin;
+	LoginPOM objLogin;
 	Guru99HomePage objHomePage;
 	
 
@@ -24,7 +24,7 @@ public class Test99GuruLogin {
 		driver = new FirefoxDriver();
 		//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get("http://demo.guru99.com/V4/");
-		objLogin = new Guru99Login(driver);
+		objLogin = new LoginPOM(driver);
 		
 		//fuction to read error messages.
 	}
