@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-
-<!-- <suite name="Test-class Suite" parallel="classes" thread-count="2" > 
-	<test name="Test-class test" > <classes> <class name="com.c2t.testng.parallel.classes.ParallelClassesTestOne" 
-	/> <class name="com.c2t.testng.parallel.classes.ParallelClassesTestTwo" /> 
-	</classes> </test> </suite> -->
-
-<suite name="suite1" parallel="classes" thread-count="3">
+<suite name="suite1" parallel="classes" thread-count="2">
 	<test name="test1">
 		<classes>
 			<class name="com.c2t.testng.parallel.classes.ParallelClassesTestOne"></class>

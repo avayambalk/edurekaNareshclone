@@ -31,8 +31,8 @@ public class AlertsTest2 {
 		driver.findElement(By.id("simple")).click();
 		TargetLocator target = driver.switchTo();
 		Alert al = target.alert();
-		//al.accept();
-		System.out.println(al.getText());
 		al.accept();
+		/*System.out.println(al.getText());
+		al.accept();*/
 	}
 }

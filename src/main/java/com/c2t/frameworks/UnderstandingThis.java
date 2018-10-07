@@ -2,26 +2,30 @@ package com.c2t.frameworks;
 
 class Student{
 	String name;
-	
-	Student(){
-		name = "Java";
-	}
-	
-	public void display(){
-		System.out.println("name = " + name);
-		System.out.println("this = " + this);
+
+	public void displayAttributes(){
+		System.out.println("I am in display...");
+		System.out.println("this="+this);
 		System.out.println(this.name);
-		
 	}
+	
+	
 }
 
 
 public class UnderstandingThis {
 	public static void main(String[] args) {
 		Student student = new Student();
-		student.display();
+		student.name = "AA";
+		student.displayAttributes();
 		
 		System.out.println("student="+student);
-		System.out.println(student.name);
+		
+		Student student1 = new Student();
+		student1.name = "BB";
+		student1.displayAttributes();
+		
+		System.out.println("student="+student1);
+		
 	}
 }

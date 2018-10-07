@@ -19,8 +19,13 @@ public class LocatingMultipleElements2 {
 		WebDriver driver = new FirefoxDriver();
 		driver.get("file:///D:/nchaurasia/Automation-Architect/connect2tech.in-SeleniumWebDriver3.x_2/src/main/java/com/c2t/selenium/locate/LocatingMultipleElements.html");
 		
-		WebElement we1 = driver.findElement(By.name("firstname"));
-		we1.sendKeys("Hello");
+		List<WebElement> we =driver.findElements(By.name("gender"));
+		
+		for(int i=0;i<we.size();i++){
+			if(i==1){
+				we.get(i).click();
+			}
+		}
 		
 	}
 }

@@ -36,46 +36,29 @@ public class HandlingPopup2 {
 		// Set<String> s1 = driver.getWindowHandles();
 		// driver.switchTo().window(ChildWindow);
 		
+		String parent = driver.getWindowHandle();
 		driver.findElement(By.linkText("Click Here")).click();
-		String parent = driver.getWindowHandle();
-		Set <String> windows = driver.getWindowHandles();
 		
-		Iterator<String> iter = windows.iterator();
+		Set <String> s = driver.getWindowHandles();
+		
+		Iterator <String> iter = s.iterator();
 		
 		while(iter.hasNext()){
-			String window = iter.next();
-			if(!parent.equals(window)){
-				driver.switchTo().window(window);
-				
-				driver.findElement(By.name("btnLogin")).click();
-				driver.close();
-				
-			}
-		}
-		
-		
-		
-		String title = driver.getTitle();
-		System.out.println(title);
-		
-		/*driver.findElement(By.linkText("Click Here")).click();
-		 * 
-		 * 
-		 * 
-
-		String parent = driver.getWindowHandle();
-		Set<String> windows = driver.getWindowHandles();
-		
-		Iterator<String>  iter = windows.iterator();
-		while(iter.hasNext()){
-			String s = iter.next();
 			
-			if(s.equals(parent)){
+			String window = iter.next();
+			
+			if (parent.equals(window)){
 				
 			}else{
-				driver.switchTo().window(s);
+				driver.switchTo().window(window);
+				driver.findElement(By.name("emailid")).sendKeys("email");
+				driver.close();
 			}
-		}*/
+			
+		}
+		
+		driver.switchTo().window(parent);
+		
 		
 		
 		

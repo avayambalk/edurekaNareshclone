@@ -1,15 +1,15 @@
-package com.c2t.selenium.locate;
+package com.c2t.edureka.locate;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class MyFirstSeleniumFireFox {
+public class LocatingElements {
 
 	public static void main(String[] args) {
 		
-		String url = "file:///D:/nchaurasia/Automation-Architect/connect2tech.in-SeleniumWebDriver3.x_2/src/main/java/com/c2t/selenium/locate/LocatingMultipleElements.html";
+		String url = "file:///D:/nchaurasia/Automation-Architect/connect2tech.in-SeleniumWebDriver3.x_2/src/main/java/com/c2t/edureka/locate/LocatingMultipleElements.html";
 		// declaration and instantiation of objects/variables
 		System.setProperty("webdriver.firefox.marionette", "geckodriver.exe");
 		
