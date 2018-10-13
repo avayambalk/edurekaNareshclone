@@ -16,17 +16,18 @@ public class LocatingElementsXpath {
 		WebDriver driver = new FirefoxDriver();
 		driver.get(url);
 
-		//WebElement we = driver.findElement(By.xpath("//label[contains(text(),'Email or Phone')]"));
+		//WebElement we = driver.findElement(By.xpath("//label[contains(text(), 'Email or Phone')]"));
+		//System.out.println(we);
 		
-		//driver.findElement(By.xpath("//input[contains(@id,'email')]")).sendKeys("email");
+		//WebElement elementEmail = driver.findElement(By.xpath("//input[contains(@id,'email')]"));
+		//elementEmail.sendKeys("message4naresh@gmail.com");
 		
-		//String text = driver.findElement(By.xpath("//div[starts-with(text(),'Facebook helps you')]")).getText();
-		//System.out.println("text="+text);
+		/*WebElement weStartsWith = driver.findElement(By.xpath("//div[starts-with(text(), 'Facebook helps you')]"));
+		String s = weStartsWith.getText();
+		System.out.println(s);*/
 		
-		//Following axes
-		driver.findElement(By.xpath(".//*[@id='email']/following::td[1]/input")).sendKeys("Password");
-		
-		//.//*[@id='day']/following-sibling::select/option[1]
-
+		WebElement we = 
+				driver.findElement(By.xpath("//input[contains(@id,'email')]/following::input[1]"));
+		we.sendKeys("password");
 	}
 }

@@ -1,5 +1,7 @@
 package com.c2t.edureka.locate;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -29,6 +31,19 @@ public class LocatingElements {
 		/*WebElement we3 = driver.findElement(By.partialLinkText("Hello"));
 		we3.click();*/
 		
+		/*List<WebElement> list = driver.findElements(By.name("firstname"));
+		
+		for(int i=0;	i<list.size();	i++){
+			WebElement we = list.get(i);
+			if(i==0){
+				we.sendKeys("firstname");
+			}else{
+				we.sendKeys("lastname");
+			}
+		}*/
+		
+		WebElement we = driver.findElement(By.xpath("//input[contains(@id,'email')]/following::td[1]/input"));
+		we.sendKeys("password");
 		
 		
 	}
