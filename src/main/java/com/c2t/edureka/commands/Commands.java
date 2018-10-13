@@ -1,11 +1,11 @@
-package com.c2t.edureka.locate;
+package com.c2t.edureka.commands;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class LocatingElements {
+public class Commands {
 
 	public static void main(String[] args) {
 		
@@ -17,18 +17,26 @@ public class LocatingElements {
 		driver.get(url);
 		
 		
-		/*WebElement we = driver.findElement(By.id("fname"));
-		we.clear();*/
+		/*String s = driver.getCurrentUrl();
+		System.out.println(s);
 		
-		/*WebElement we2 = driver.findElement(By.name("lastname"));
-		we2.sendKeys("I am last name");*/
+		System.out.println("-------------------------------------");
 		
-		/*WebElement we = driver.findElement(By.linkText("Hello"));
-		we.clear();*/
+		String source = driver.getPageSource();
+		System.out.println(source);
 		
-		/*WebElement we3 = driver.findElement(By.partialLinkText("Hello"));
-		we3.click();*/
+		System.out.println("-------------------------------------");*/
 		
+		String title = driver.getTitle();
+		System.out.println(title);
+		
+		if(title.equals("My First Selenium!!!")){
+			System.out.println("Test passed...");
+		}else{
+			System.out.println("Test failed...");
+		}
+		
+		driver.close();
 		
 		
 	}

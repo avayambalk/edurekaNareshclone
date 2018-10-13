@@ -1,11 +1,13 @@
-package com.c2t.edureka.locate;
+package com.c2t.edureka.commands;
+
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class LocatingElements {
+public class UsingFindElements {
 
 	public static void main(String[] args) {
 		
@@ -17,18 +19,14 @@ public class LocatingElements {
 		driver.get(url);
 		
 		
-		/*WebElement we = driver.findElement(By.id("fname"));
-		we.clear();*/
+		List<WebElement> list = driver.findElements(By.name("gender1"));
 		
-		/*WebElement we2 = driver.findElement(By.name("lastname"));
-		we2.sendKeys("I am last name");*/
-		
-		/*WebElement we = driver.findElement(By.linkText("Hello"));
-		we.clear();*/
-		
-		/*WebElement we3 = driver.findElement(By.partialLinkText("Hello"));
-		we3.click();*/
-		
+		for(int i=0;i<list.size() ; i++){
+			if(i == 1){
+				WebElement webElement = list.get(i);
+				webElement.click();
+			}
+		}
 		
 		
 	}
