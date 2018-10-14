@@ -18,6 +18,21 @@ public class FramesProgram {
 		WebDriver driver = new FirefoxDriver();
 		driver.get(url);
 		
+		/*WebDriver wd =driver.switchTo().frame("top");
+		String topSource = wd.getPageSource();
+		System.out.println(topSource);
+		*/
+		
+		/*WebDriver wd =driver.switchTo().frame(1);
+		String topSource = wd.getPageSource();
+		System.out.println(topSource);*/
+		
+		WebElement we = driver.findElement(By.tagName("frame"));
+		
+		WebDriver wd =driver.switchTo().frame(we);
+		String topSource = wd.getPageSource();
+		System.out.println(topSource);
+		
 		
 	}
 }
