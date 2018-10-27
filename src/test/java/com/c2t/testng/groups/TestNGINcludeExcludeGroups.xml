@@ -13,6 +13,7 @@
 		</groups>
 		<classes>
 			<class name="com.c2t.testng.groups.TestNGIncludeExcludeGroups" />
+			<class name="com.c2t.testng.groups.TestNGIncludeExcludeGroups2" />
 		</classes>
 	</test>
 	

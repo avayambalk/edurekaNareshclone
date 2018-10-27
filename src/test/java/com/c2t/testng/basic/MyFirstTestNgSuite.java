@@ -16,41 +16,21 @@ import org.testng.annotations.Test;
  * @YouTubeChannel: https://goo.gl/c7FAsq
  */
 
-public class MyFirstTestNG {
+public class MyFirstTestNgSuite {
 	
-	@BeforeClass
-	public void beforeClass(){
-		System.out.println("@BeforeClass");
-	}
 	
-	@BeforeTest
-	public void beforeTest(){
-		System.out.println("beforeTest...");
-	}
-	
-	@BeforeMethod
-	public void beforeMethod(){
-		System.out.println("beforeMethod...");
-	}
-
 	@Test
 	public void lastName() {
 		System.out.println("lastName...");
+		System.out.println("id1=="+Thread.currentThread().getId());
 	}
 
 	@Test
 	public void firstName() {
 		System.out.println("firstName...");
+		System.out.println("id1=="+Thread.currentThread().getId());
 	}
 	
-	@AfterMethod
-	public void afterMethod(){
-		System.out.println("afterMethod...");
-	}
 	
-	@AfterTest
-	public void afterTest(){
-		System.out.println("afterTest...");
-	}
 
 }

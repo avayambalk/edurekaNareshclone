@@ -40,6 +40,8 @@ public class FluentWaitTest {
 			// https://google.github.io/guava/releases/20.0/api/docs/com/google/common/base/Function.html
 			// apply(F input) Returns the result of applying this function to
 			// input.
+
+			// https://www.edureka.co/community/6071/fluent-wait-example-with-code
 			WebElement message = wait.until(new Function<WebDriver, WebElement>() {
 				public WebElement apply(WebDriver d) {
 					WebElement we = d.findElement(By.id("pageContent"));
