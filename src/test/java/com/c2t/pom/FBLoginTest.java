@@ -12,10 +12,9 @@ import org.testng.annotations.Test;
 import com.c2t.pom.MyPOM;
 
 public class FBLoginTest {
-	
+
 	WebDriver driver;
 	MyPOM pom;
-	
 
 	@BeforeTest
 	public void setup() {
@@ -25,12 +24,10 @@ public class FBLoginTest {
 		driver.get("https://www.facebook.com/");
 		pom = new MyPOM(driver);
 	}
-	
+
 	@Test
-	public void loginTest(){
+	public void loginTest() {
 		pom.login("message4naresh@gmail.com", "password");
-		
-		
 	}
 
 }
