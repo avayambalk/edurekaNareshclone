@@ -8,33 +8,32 @@ public class MyTCListener2 implements ITestListener{
 
 	@Override
 	public void onTestStart(ITestResult result) {
-		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public void onTestSuccess(ITestResult result) {
-		// TODO Auto-generated method stub
 		
-		System.out.println("hello..");
-		
+		String name = result.getMethod().getMethodName();
+		System.out.println("pass name="+name);
 	}
 
 	@Override
 	public void onTestFailure(ITestResult result) {
-		// TODO Auto-generated method stub
 		
+		String name = result.getMethod().getMethodName();
+		System.out.println("fail name="+name);
 	}
 
 	@Override
 	public void onTestSkipped(ITestResult result) {
-		// TODO Auto-generated method stub
+		
 		
 	}
 
 	@Override
 	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
-		// TODO Auto-generated method stub
+		
 		
 	}
 
@@ -49,4 +48,5 @@ public class MyTCListener2 implements ITestListener{
 		// TODO Auto-generated method stub
 		
 	}
+
 }

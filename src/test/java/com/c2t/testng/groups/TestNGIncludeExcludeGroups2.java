@@ -8,12 +8,12 @@ public class TestNGIncludeExcludeGroups2 {
 		System.out.println("-----------testMethodOne------------------");
 	}
 
-	@Test(groups = { "sanity" })
+	@Test
 	public void testMethodTwo() {
 		System.out.println("-----------testMethodTwo------------------");
 	}
 
-	@Test(groups = { "sanity", "regression" })
+	@Test
 	public void testMethodThree() {
 		System.out.println("-----------testMethodThree------------------");
 	}

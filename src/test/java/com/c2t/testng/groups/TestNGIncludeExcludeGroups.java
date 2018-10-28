@@ -3,17 +3,17 @@ package com.c2t.testng.groups;
 import org.testng.annotations.Test;
 
 public class TestNGIncludeExcludeGroups {
-	@Test()
+	@Test
 	public void testMethodOne() {
 		System.out.println("-----------testMethodOne------------------");
 	}
 
-	@Test(groups = { "sanity" })
+	@Test(groups={"sanity","regression"})
 	public void testMethodTwo() {
 		System.out.println("-----------testMethodTwo------------------");
 	}
 
-	@Test(groups = { "sanity", "regression" })
+	@Test(groups={"sanity"})
 	public void testMethodThree() {
 		System.out.println("-----------testMethodThree------------------");
 	}

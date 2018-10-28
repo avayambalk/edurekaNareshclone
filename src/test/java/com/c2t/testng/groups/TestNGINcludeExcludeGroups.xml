@@ -2,21 +2,22 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Multi Group Suite" verbose="1">
 
-	
+
 
 	<test name="Sanity Test">
+
 		<groups>
 			<run>
-				<include name="sanity"/>
-				<exclude name="regression"/>
+				<exclude name="regression"></exclude>
+				<include name="sanity"></include>
 			</run>
 		</groups>
+
 		<classes>
 			<class name="com.c2t.testng.groups.TestNGIncludeExcludeGroups" />
-			<class name="com.c2t.testng.groups.TestNGIncludeExcludeGroups2" />
 		</classes>
 	</test>
-	
+
 
 </suite>
 

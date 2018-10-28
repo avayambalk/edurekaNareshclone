@@ -32,31 +32,27 @@ public class ReadExcelDemo2 {
 		// Row row = rowIterator.next();
 		// Iterator<Cell> cellIterator = row.cellIterator();
 		
-		File f = new File("DDT.xlsx");
+		File f  = new File("DDT.xlsx");
 		FileInputStream fis = new FileInputStream(f);
 		
 		XSSFWorkbook workbook = new XSSFWorkbook(fis);
 		
 		XSSFSheet sheet = workbook.getSheet("Employee Data");
 		
-		Iterator<Row>  rows = sheet.rowIterator();
+		Iterator <Row> iter = sheet.iterator();
 		
-		while(rows.hasNext()){
+		while(iter.hasNext()){
+			Row row = iter.next();
 			
-			Row row = rows.next();
-			
-			
-			Iterator<Cell> cells = row.cellIterator();
+			Iterator <Cell> cells = row.iterator();
 			
 			while(cells.hasNext()){
-				Cell cell = cells.next();
-				System.out.println(cell);
+				Cell c = cells.next();
+				System.out.println(c);
 			}
 			
-			
+			System.out.println("-------------------------");
 		}
-		
-		
 		
 		
 	}
