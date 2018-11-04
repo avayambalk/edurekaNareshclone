@@ -11,5 +11,6 @@ public class MyFirstSelenium_FF_SetUp {
 		System.setProperty("webdriver.firefox.marionette", "D:/nchaurasia/Automation-Architect/connect2tech.in-SeleniumWebDriver3.x_2/driver/geckodriver.exe");
 		WebDriver driver = new FirefoxDriver();
 		driver.get(url);
+		System.out.println(driver.getTitle());
 	}
 }

@@ -25,6 +25,13 @@ public class TestNG1 {
 	
 	@Test
 	public void lastName(){
+		
+		//open browser
+		//loging to the url
+		//finish ur work
+		//log out
+		//close bowser
+		
 		System.out.println("lastName");
 		System.out.println(Thread.currentThread().getId());
 	}

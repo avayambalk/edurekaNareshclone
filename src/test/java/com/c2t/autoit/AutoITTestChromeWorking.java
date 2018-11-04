@@ -18,7 +18,7 @@ import static org.junit.Assert.*;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-public class AutoITTestChrome {
+public class AutoITTestChromeWorking {
 
 	private static WebDriver driver;
 
@@ -41,7 +41,7 @@ public class AutoITTestChrome {
 		System.out.println(we);
 		we.click();
 		try {
-			Runtime.getRuntime().exec("D:/nchaurasia/Automation-Architect/AutoIT/FileUpload.exe");
+			Runtime.getRuntime().exec("D:/nchaurasia/Automation-Architect/AutoIT/FileUploadSelenium2.exe");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

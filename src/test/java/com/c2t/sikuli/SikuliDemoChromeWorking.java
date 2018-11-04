@@ -16,8 +16,8 @@ public class SikuliDemoChromeWorking {
 		System.setProperty("webdriver.chrome.driver", "D:/nchaurasia/Automation-Architect/connect2tech.in-SeleniumWebDriver3.x_2/driver/chromedriver.exe");
 		String path = "D:/nchaurasia/Automation-Architect/img/";
 		Screen s = new Screen();
-		Pattern fileInputTextBox = new Pattern(path + "img-100.PNG");
-		Pattern openButton = new Pattern(path + "img-200.PNG");
+		Pattern fileInputTextBox = new Pattern(path + "Img-Text1.PNG");
+		Pattern openButton = new Pattern(path + "Img-Save1.PNG");
 		WebDriver driver;
 
 		// Open Chrome browser
@@ -28,9 +28,7 @@ public class SikuliDemoChromeWorking {
 		driver.findElement(By.id("fileToUpload")).click();
 
 		s.wait(fileInputTextBox,5);
-		//s.type(fileInputTextBox,"C:\\Users\\naresh\\Pictures\\Youtube\\c2t home page-python.PNG");
 		s.type(fileInputTextBox,"C:\\Users\\naresh\\Desktop\\intern.txt");
-		//C:\Users\naresh\Desktop
 		s.click(openButton);
 		
 	}
