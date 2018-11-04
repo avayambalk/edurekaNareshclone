@@ -27,6 +27,8 @@ public class ReadExcelDemo2 {
 		// Row row = rowIterator.next();
 		// Iterator<Cell> cellIterator = row.cellIterator();
 		
+		String data[][] = new String[10][5];
+		
 		File f = new File("DDT.xlsx");
 		FileInputStream fis = new FileInputStream(f);
 		
@@ -36,17 +38,30 @@ public class ReadExcelDemo2 {
 		
 		Iterator<Row> rows = sheet.iterator();
 		
+		
+		int rowCount = 0;
+		
 		while(rows.hasNext()){
+			
+			
 			
 			Row r = rows.next();
 			
 			Iterator<Cell> cells= r.iterator();
 			
+			int colCount = 0;
 			
 			while(cells.hasNext()){
 				Cell c = cells.next();
 				System.out.println(c);
+				
+				data [rowCount][colCount] = c.toString();
+				
+				++colCount;
+				
 			}
+			
+			++rowCount;
 			
 			System.out.println("-----------------");
 			

@@ -40,11 +40,12 @@ public class AutoITTestChromeWorking {
 		WebElement we = driver.findElement(By.name("datafile"));
 		System.out.println(we);
 		we.click();
+		
+		
 		try {
 			Runtime.getRuntime().exec("D:/nchaurasia/Automation-Architect/AutoIT/FileUploadSelenium2.exe");
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		} catch (Exception e) {
+			// TODO: handle exception
 		}
 		
 	}

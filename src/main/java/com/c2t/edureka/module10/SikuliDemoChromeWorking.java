@@ -1,4 +1,4 @@
-package com.c2t.sikuli;
+package com.c2t.edureka.module10;
 
 import java.util.concurrent.TimeUnit;
 
