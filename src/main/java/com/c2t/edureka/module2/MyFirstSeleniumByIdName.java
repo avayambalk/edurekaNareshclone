@@ -1,8 +1,12 @@
 package com.c2t.edureka.module2;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class MyFirstSeleniumFireFox {
+import java.util.List;
+
+public class MyFirstSeleniumByIdName {
 
 	public static void main(String[] args) {
 		
@@ -15,18 +19,20 @@ public class MyFirstSeleniumFireFox {
 		WebDriver driver = new FirefoxDriver();
 		driver.get(url);
 		
-		String pageSource = driver.getPageSource();
-		System.out.println("pageSource="+pageSource);
+		/*WebElement we1 = driver.findElement(By.id("fname"));
+		we1.sendKeys("First Name is Java");*/
 		
-		System.out.println("---------------------------------------------");
+		List <WebElement> l = driver.findElements(By.name("firstname"));
 		
-		String title = driver.getTitle();
-		System.out.println("title="+title);
-		
-		System.out.println("---------------------------------------------");
-		
-		String url1 = driver.getCurrentUrl();
-		System.out.println("url1="+url1);
+		for(int i=0;i<l.size();i++){
+			if(i == 0){
+				//WebElement we1 = l.get(i);
+				//we1.sendKeys("i am first name");
+			}else{
+				WebElement we2 = l.get(i);
+				we2.sendKeys("i am last name");
+			}
+		}
 				
 	
 	}

@@ -2,7 +2,7 @@ package com.c2t.edureka.module2;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class MyFirstSeleniumFireFox {
+public class MyFirstSeleniumFireFoxNavigate {
 
 	public static void main(String[] args) {
 		
@@ -13,20 +13,11 @@ public class MyFirstSeleniumFireFox {
 		
 		//Ctrl + shift + T
 		WebDriver driver = new FirefoxDriver();
-		driver.get(url);
+		driver.navigate().to(url);
 		
-		String pageSource = driver.getPageSource();
-		System.out.println("pageSource="+pageSource);
+		driver.navigate().refresh();
 		
-		System.out.println("---------------------------------------------");
-		
-		String title = driver.getTitle();
-		System.out.println("title="+title);
-		
-		System.out.println("---------------------------------------------");
-		
-		String url1 = driver.getCurrentUrl();
-		System.out.println("url1="+url1);
+		driver.close();
 				
 	
 	}

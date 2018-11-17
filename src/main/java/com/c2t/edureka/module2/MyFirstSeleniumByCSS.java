@@ -1,8 +1,10 @@
 package com.c2t.edureka.module2;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class MyFirstSeleniumFireFox {
+public class MyFirstSeleniumByCSS {
 
 	public static void main(String[] args) {
 		
@@ -15,18 +17,9 @@ public class MyFirstSeleniumFireFox {
 		WebDriver driver = new FirefoxDriver();
 		driver.get(url);
 		
-		String pageSource = driver.getPageSource();
-		System.out.println("pageSource="+pageSource);
+		WebElement we1 = driver.findElement(By.className("w3-input"));
+		we1.sendKeys("using class name");
 		
-		System.out.println("---------------------------------------------");
-		
-		String title = driver.getTitle();
-		System.out.println("title="+title);
-		
-		System.out.println("---------------------------------------------");
-		
-		String url1 = driver.getCurrentUrl();
-		System.out.println("url1="+url1);
 				
 	
 	}
