@@ -18,15 +18,17 @@ public class HeadLess {
 		driver.get("http://www.google.com");
 
 		// Locate the searchbox using its name
-		WebElement element = driver.findElement(By.name("q"));
+		WebElement element = driver.findElement(By.id("lst-ib"));
 
 		// Enter a search query
 		element.sendKeys("Guru99");
+		
+		driver.findElement(By.name("btnK")).click();
 
 		// Submit the query. Webdriver searches for the form using the text
 		// input element automatically
 		// No need to locate/find the submit button
-		element.submit();
+		//element.submit();
 
 		// This code will print the page title
 		System.out.println("Page title is: " + driver.getTitle());
