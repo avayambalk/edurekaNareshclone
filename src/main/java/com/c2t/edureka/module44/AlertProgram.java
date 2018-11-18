@@ -1,4 +1,4 @@
-package com.c2t.edureka.module4.old;
+package com.c2t.edureka.module44;
 
 import java.util.List;
 
@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WebDriver.TargetLocator;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class AlertProgram2 {
+public class AlertProgram {
 
 	public static void main(String[] args) {
 		
@@ -20,17 +20,15 @@ public class AlertProgram2 {
 		WebDriver driver = new FirefoxDriver();
 		driver.get(url);
 		
-		driver.findElement(By.id("prompt")).click();
+		driver.findElement(By.id("simple")).click();
 		
 		TargetLocator tl = driver.switchTo();
 		Alert alt = tl.alert();
+		String text = alt.getText();
 		
+		System.out.println(text);
 		
-		alt.sendKeys("This is 3rd alert");
-		
-		
-		
-		
+		alt.accept();
 		
 	}
 }

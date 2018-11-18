@@ -28,7 +28,7 @@ public class ImplicitWait {
 		try {
 			System.setProperty("webdriver.firefox.marionette", "geckodriver.exe");
 			driver = new FirefoxDriver();
-			driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+			//driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 			
 			String baseUrl = "file:///D:/nchaurasia/Automation-Architect/connect2tech.in-SeleniumWebDriver3.x_2/src/main/resources/LocatingMultipleElements.html";
 			driver.get(baseUrl);
@@ -36,6 +36,7 @@ public class ImplicitWait {
 			
 			// finds elements based on the value of the "class" attribute
 			lStartTime = new Date().getTime();
+			driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 			WebElement we = driver.findElement(By.className("w4-input"));
 			
 

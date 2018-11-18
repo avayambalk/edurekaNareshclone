@@ -1,6 +1,8 @@
-package com.c2t.edureka.module4.old;
+package com.c2t.edureka.module44;
 
+import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -8,25 +10,28 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WebDriver.TargetLocator;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Dropdown {
+public class Modal {
+	
+	static WebDriverWait wait;
 
 	public static void main(String[] args) {
 		
-		String url = "file:///D:/nchaurasia/Automation-Architect/connect2tech.in-SeleniumWebDriver3.x_2/src/main/java/com/c2t/edureka/locate/LocatingMultipleElements.html";
+		
+		String url = "file:///D:/nchaurasia/Automation-Architect/connect2tech.in-SeleniumWebDriver3.x_2/src/main/resources/Modal.html";
 		// declaration and instantiation of objects/variables
 		System.setProperty("webdriver.firefox.marionette", "geckodriver.exe");
 		
 		WebDriver driver = new FirefoxDriver();
 		driver.get(url);
 		
-		WebElement we = driver.findElement(By.id("designation"));
+		driver.findElement(By.id("myBtn")).click();
 		
-		Select dropdown = new Select(we);
-		//dropdown.selectByIndex(2);
-		dropdown.selectByValue("Java");
-	
+		
+		WebElement we = driver.findElement(By.id("myModal"));
+		System.out.println(we.getText());
+		we.click();
 		
 	}
 }

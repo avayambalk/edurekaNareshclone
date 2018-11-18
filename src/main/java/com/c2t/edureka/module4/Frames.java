@@ -1,4 +1,4 @@
-package com.c2t.frame;
+package com.c2t.edureka.module4;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
