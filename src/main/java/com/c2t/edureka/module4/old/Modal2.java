@@ -1,4 +1,4 @@
-package com.c2t.edureka.module4;
+package com.c2t.edureka.module4.old;
 
 import java.util.Iterator;
 import java.util.List;
@@ -12,7 +12,7 @@ import org.openqa.selenium.WebDriver.TargetLocator;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Modal {
+public class Modal2 {
 	
 	static WebDriverWait wait;
 
@@ -26,12 +26,16 @@ public class Modal {
 		WebDriver driver = new FirefoxDriver();
 		driver.get(url);
 		
-		driver.findElement(By.id("myBtn")).click();
-		
-		
-		WebElement we = driver.findElement(By.id("myModal"));
-		System.out.println(we.getText());
+		WebElement we = driver.findElement(By.id("myBtn"));
 		we.click();
+		
+		driver.getWindowHandles();
+		
+		/*WebElement weModal = driver.findElement(By.id("myModal"));
+		String text = weModal.getText();
+		System.out.println(text);
+		
+		weModal.click();*/
 		
 	}
 }

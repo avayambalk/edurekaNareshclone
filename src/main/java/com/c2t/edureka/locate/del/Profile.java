@@ -1,11 +1,14 @@
-package com.c2t.edureka.locate;
+package com.c2t.edureka.locate.del;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.firefox.internal.ProfilesIni;
 
-public class Validation2 {
+public class Profile {
 
 	public static void main(String[] args) {
 
@@ -13,13 +16,15 @@ public class Validation2 {
 		// declaration and instantiation of objects/variables
 		System.setProperty("webdriver.firefox.marionette", "geckodriver.exe");
 
-		WebDriver driver = new FirefoxDriver();
-		driver.get(url);
-
-		WebElement we = driver.findElement(By.name("fname"));
-		boolean isEnabled =  we.isEnabled();
-		System.out.println(isEnabled);
+		ProfilesIni pIni = new ProfilesIni();
+		FirefoxProfile profile = pIni.getProfile("java");
 		
+		FirefoxOptions fOptions = new FirefoxOptions();
+		fOptions.setProfile(profile);
+		
+		WebDriver driver = new FirefoxDriver(fOptions);
+		
+		driver.get(url);
 		
 	}
 }

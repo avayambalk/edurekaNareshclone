@@ -1,4 +1,4 @@
-package com.c2t.edureka.module4;
+package com.c2t.edureka.module4.old;
 
 import java.util.List;
 
@@ -8,27 +8,27 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WebDriver.TargetLocator;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 
-public class AlertProgram {
+public class DragDrop {
 
 	public static void main(String[] args) {
 		
-		String url = "file:///D:/nchaurasia/Automation-Architect/connect2tech.in-SeleniumWebDriver3.x_2/src/main/java/com/c2t/edureka/module4/Alert.html";
+		String url = "http://cookbook.seleniumacademy.com/DragDropDemo.html";
 		// declaration and instantiation of objects/variables
 		System.setProperty("webdriver.firefox.marionette", "geckodriver.exe");
 		
 		WebDriver driver = new FirefoxDriver();
 		driver.get(url);
 		
-		driver.findElement(By.id("simple")).click();
 		
-		TargetLocator tl = driver.switchTo();
-		Alert alt = tl.alert();
-		String text = alt.getText();
+		WebElement source = driver.findElement(By.id("draggable"));
+		WebElement target = driver.findElement(By.id("droppable"));
 		
-		System.out.println(text);
-		
-		alt.accept();
+		Actions action = new Actions(driver);
+		action.dragAndDrop(source, target).perform();
+	
 		
 	}
 }

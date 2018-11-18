@@ -1,4 +1,4 @@
-package com.c2t.edureka.locate;
+package com.c2t.edureka.locate.del;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

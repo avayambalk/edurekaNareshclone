@@ -1,4 +1,4 @@
-package com.c2t.edureka.locate;
+package com.c2t.edureka.locate.del;
 
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
