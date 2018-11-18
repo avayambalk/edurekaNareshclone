@@ -31,7 +31,7 @@ public class ChromeGridWorkingCode_Port_5555 {
 	public static void setUp() throws MalformedURLException {
 
 		baseUrl = "https://www.facebook.com/";
-		nodeUrl = "http://localhost:5555/wd/hub";
+		nodeUrl = "http://localhost:5555/wd/hub"; // node
 		
 		DesiredCapabilities capabilities = DesiredCapabilities.chrome();
 		capabilities.setBrowserName("chrome");
