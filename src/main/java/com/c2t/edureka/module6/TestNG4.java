@@ -22,7 +22,14 @@ import org.testng.annotations.Test;
 
 public class TestNG4 {
 
-	
+	@BeforeTest
+	public void beforeTest(){
+		String url = "https://www.facebook.com/";
+		System.setProperty("webdriver.firefox.marionette", "D:/nchaurasia/Automation-Architect/connect2tech.in-SeleniumWebDriver3.x_2/driver/geckodriver.exe");
+		
+		WebDriver driver = new FirefoxDriver();
+		driver.get(url);
+	}
 
 	@Test
 	public void test2() {

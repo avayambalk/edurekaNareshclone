@@ -3,6 +3,7 @@ package com.c2t.edureka.module6;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.AfterMethod;
@@ -22,7 +23,15 @@ import org.testng.annotations.Test;
 
 public class TestNG5 {
 
-	
+	@BeforeTest
+	public void beforeTest(){
+		String url = "https://www.google.com/";
+		System.setProperty("webdriver.chrome.driver", "D:/nchaurasia/Automation-Architect/connect2tech.in-SeleniumWebDriver3.x_2/driver/chromedriver.exe");
+
+		
+		WebDriver driver = new ChromeDriver();
+		driver.get(url);
+	}
 
 	@Test
 	public void test2() {
