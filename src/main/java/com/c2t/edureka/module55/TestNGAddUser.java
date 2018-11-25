@@ -1,4 +1,4 @@
-package com.c2t.edureka.module5;
+package com.c2t.edureka.module55;
 
 
 import static org.testng.Assert.assertEquals;

@@ -1,9 +1,8 @@
-package com.c2t.edureka.module5;
+package com.c2t.edureka.module55;
 
 
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 /**
@@ -15,29 +14,25 @@ import org.testng.annotations.Test;
  * @YouTubeChannel: https://goo.gl/c7FAsq
  */
 
-public class TestNGParameter {
+public class TestNGParallel {
 	
-	
-	@Parameters({"param1"})
 	@Test
-	public void firstName(String s1){
+	public void firstName(){
+		System.out.println("firstName");
 		
-		if(s1.equals("Firefox")){
-			System.out.println("Open ff browser");
-		}else{
-			System.out.println("Chrome..");
-		}
-		
+		System.out.println(Thread.currentThread().getId());
 	}
 	
 	@Test
 	public void lastName(){
 		System.out.println("lastName");
+		System.out.println(Thread.currentThread().getId());
 	}
 	
 	@Test
-	public void middleName(){
-		System.out.println("middleName");
+	public void lastName3(){
+		System.out.println("lastName3");
+		System.out.println(Thread.currentThread().getId());
 	}
 
 	

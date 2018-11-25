@@ -1,4 +1,4 @@
-package com.c2t.edureka.module44;
+package com.c2t.edureka;
 
 import java.util.List;
 

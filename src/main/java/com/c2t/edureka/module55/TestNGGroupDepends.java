@@ -1,4 +1,4 @@
-package com.c2t.edureka.module5;
+package com.c2t.edureka.module55;
 
 
 import org.testng.annotations.AfterTest;
@@ -14,26 +14,25 @@ import org.testng.annotations.Test;
  * @YouTubeChannel: https://goo.gl/c7FAsq
  */
 
-public class TestNGParallel2 {
+public class TestNGGroupDepends {
+	
+	
+	
+	@Test(dependsOnMethods={"lastName"})
+	public void firstName(){
+		System.out.println("firstName");
+	}
 	
 	@Test
-	public void firstName(){
-		System.out.println("firstName2");
-		
-		System.out.println(Thread.currentThread().getId());
+	public void middleName(){
+		System.out.println("middleName");
 	}
 	
 	@Test
 	public void lastName(){
-		System.out.println("lastName2");
-		System.out.println(Thread.currentThread().getId());
+		System.out.println("lastName");
 	}
 	
-	@Test
-	public void lastName3(){
-		System.out.println("lastName32");
-		System.out.println(Thread.currentThread().getId());
-	}
-
+	
 	
 }

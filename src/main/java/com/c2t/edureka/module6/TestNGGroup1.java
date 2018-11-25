@@ -1,4 +1,4 @@
-package com.c2t.edureka.module5;
+package com.c2t.edureka.module6;
 
 
 import org.testng.annotations.AfterTest;
@@ -14,19 +14,19 @@ import org.testng.annotations.Test;
  * @YouTubeChannel: https://goo.gl/c7FAsq
  */
 
-public class TestNGGroup2 {
+public class TestNGGroup1 {
 	
-	@Test(groups = {"g1"})
+	@Test(groups={"g1"})
 	public void firstName(){
 		System.out.println("firstName");
 	}
 	
-	@Test(groups = {"g2"})
+	@Test(groups={"g2"})
 	public void lastName(){
 		System.out.println("lastName");
 	}
 	
-	@Test(groups = {"g1", "g2"})
+	@Test(groups={"g1","g2"})
 	public void middleName(){
 		System.out.println("middleName");
 	}

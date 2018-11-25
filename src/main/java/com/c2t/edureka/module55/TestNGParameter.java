@@ -1,8 +1,9 @@
-package com.c2t.edureka.module5;
+package com.c2t.edureka.module55;
 
 
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 /**
@@ -14,18 +15,19 @@ import org.testng.annotations.Test;
  * @YouTubeChannel: https://goo.gl/c7FAsq
  */
 
-public class TestNGGroupDepends {
+public class TestNGParameter {
 	
 	
-	
-	@Test(dependsOnMethods={"lastName"})
-	public void firstName(){
-		System.out.println("firstName");
-	}
-	
+	@Parameters({"param1"})
 	@Test
-	public void middleName(){
-		System.out.println("middleName");
+	public void firstName(String s1){
+		
+		if(s1.equals("Firefox")){
+			System.out.println("Open ff browser");
+		}else{
+			System.out.println("Chrome..");
+		}
+		
 	}
 	
 	@Test
@@ -33,6 +35,10 @@ public class TestNGGroupDepends {
 		System.out.println("lastName");
 	}
 	
-	
+	@Test
+	public void middleName(){
+		System.out.println("middleName");
+	}
+
 	
 }

@@ -1,4 +1,4 @@
-package com.c2t.edureka.module5;
+package com.c2t.edureka.module55;
 
 
 import org.testng.annotations.AfterTest;
@@ -14,16 +14,25 @@ import org.testng.annotations.Test;
  * @YouTubeChannel: https://goo.gl/c7FAsq
  */
 
-public class TestNG2 {
+public class TestNGParallel2 {
 	
 	@Test
 	public void firstName(){
-		System.out.println("firstName");
+		System.out.println("firstName2");
+		
+		System.out.println(Thread.currentThread().getId());
 	}
 	
 	@Test
 	public void lastName(){
-		throw new RuntimeException();
+		System.out.println("lastName2");
+		System.out.println(Thread.currentThread().getId());
+	}
+	
+	@Test
+	public void lastName3(){
+		System.out.println("lastName32");
+		System.out.println(Thread.currentThread().getId());
 	}
 
 	

@@ -1,4 +1,4 @@
-package com.c2t.edureka.module5;
+package com.c2t.edureka.module55;
 
 
 import org.testng.annotations.AfterTest;
@@ -14,21 +14,32 @@ import org.testng.annotations.Test;
  * @YouTubeChannel: https://goo.gl/c7FAsq
  */
 
-public class TestNGGroup1 {
+public class TestNG1 {
 	
-	@Test(groups = {"g1"})
+	@Test
 	public void firstName(){
 		System.out.println("firstName");
+		
+		System.out.println(Thread.currentThread().getId());
 	}
 	
-	@Test(groups = {"g2"})
+	@Test
 	public void lastName(){
+		
+		//open browser
+		//loging to the url
+		//finish ur work
+		//log out
+		//close bowser
+		
 		System.out.println("lastName");
+		System.out.println(Thread.currentThread().getId());
 	}
 	
-	@Test(groups = {"g1", "g2"})
-	public void middleName(){
-		System.out.println("middleName");
+	@Test
+	public void lastName3(){
+		System.out.println("lastName3");
+		System.out.println(Thread.currentThread().getId());
 	}
 
 	

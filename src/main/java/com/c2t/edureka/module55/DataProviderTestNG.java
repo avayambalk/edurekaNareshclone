@@ -1,4 +1,4 @@
-package com.c2t.edureka.module5;
+package com.c2t.edureka.module55;
 
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
