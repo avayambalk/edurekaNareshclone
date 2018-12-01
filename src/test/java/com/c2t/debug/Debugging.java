@@ -11,7 +11,7 @@ package com.c2t.debug;
 
 
 class Debug{
-	int a;
+	int a=10;
 	public void display(){
 		System.out.println("a="+a);
 	}

@@ -17,7 +17,7 @@ public class ReadingPropertiesFile {
 			InputStream input = new FileInputStream("config.properties");
 			prop.load(input);
 			
-			String val = prop.getProperty("lname");
+			String val = prop.getProperty("key111");
 			System.out.println(val);
 
 		} catch (IOException ex) {
