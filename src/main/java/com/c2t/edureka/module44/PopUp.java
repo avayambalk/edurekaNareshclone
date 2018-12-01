@@ -24,30 +24,23 @@ public class PopUp {
 		
 		driver.findElement(By.linkText("Click Here")).click();
 		
-		String parent = driver.getWindowHandle();
-		System.out.println("parent="+parent);
+		String parentId = driver.getWindowHandle();
+		Set<String> ids = driver.getWindowHandles();
 		
-		Set <String> s = driver.getWindowHandles();
-		
-		Iterator <String> iter = s.iterator();
+		Iterator <String> iter = ids.iterator();
 		
 		while(iter.hasNext()){
-			String next = iter.next();
-			System.out.println("next="+next);
+			String s = iter.next();
 			
-			if(parent.equals(next)){
-				
-			}else{
-				driver.switchTo().window(next);
-				driver.findElement(By.name("emailid")).sendKeys("message4naresh@gmail.com");
-				//driver.close();
+			System.out.println("s="+s);
+			
+			if(!s.equals(parentId)){
+				driver.switchTo().window(s);
+				driver.findElement(By.name("emailid")).sendKeys("JavaSe");
 			}
-			
 		}
 		
-		driver.switchTo().window(parent);
-		driver.quit();
-		
+		driver.switchTo().parentFrame();
 		
 	}
 }

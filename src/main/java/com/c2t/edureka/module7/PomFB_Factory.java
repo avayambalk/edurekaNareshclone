@@ -43,7 +43,7 @@ public class PomFB_Factory {
 	}
 	
 	public void sendTextToPass(){
-		System.out.println(password.get(0).sendKeys("id"););
+		password.get(0).sendKeys("id");
 		
 	}
 	

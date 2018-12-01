@@ -21,18 +21,18 @@ public class AlertProgram {
 		
 		driver.get(url);
 		
-		/*driver.findElement(By.id("simple")).click();
+		driver.findElement(By.id("simple")).click();
 		Alert alert = driver.switchTo().alert();
-		alert.accept();*/
+		alert.accept();
 		
 		/*driver.findElement(By.id("confirm")).click();
 		Alert alert = driver.switchTo().alert();
 		alert.dismiss();*/
 
-		driver.findElement(By.id("prompt")).click();
+		/*driver.findElement(By.id("prompt")).click();
 		Alert alert = driver.switchTo().alert();
 		alert.sendKeys("Pratima");
-		alert.accept();
+		alert.accept();*/
 		
 		
 	}
