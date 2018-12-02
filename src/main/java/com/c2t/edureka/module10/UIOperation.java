@@ -3,6 +3,7 @@ package com.c2t.edureka.module10;
 import java.util.Properties;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class UIOperation {
 	WebDriver driver;
@@ -26,8 +27,9 @@ public class UIOperation {
 			break;
 		case "SETTEXT":
 			// Set text on control
-			driver.findElement(getObject(p, objectName, objectType))
-					.sendKeys(value);
+			By by = getObject(p, objectName, objectType);
+			WebElement we =  driver.findElement(by);
+			we.sendKeys(value);
 			break;
 
 		case "GOTOURL":
@@ -69,7 +71,9 @@ public class UIOperation {
 		// find by name
 		else if (objectType.equalsIgnoreCase("NAME")) {
 
-			return By.name(p.getProperty(objectName));
+			String getFromProperties = p.getProperty(objectName);
+			
+			return By.name(getFromProperties);
 
 		}
 		else if (objectType.equalsIgnoreCase("ID")) {

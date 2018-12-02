@@ -13,7 +13,7 @@ public class Dropdown {
 
 	public static void main(String[] args) {
 		
-		String url = "file:///D:/nchaurasia/Automation-Architect/connect2tech.in-SeleniumWebDriver3.x_2/src/main/java/com/c2t/edureka/module2/LocatingMultipleElements.html";
+		String url = "file:///C:/Users/naresh/Downloads/Selenium/LocatingMultipleElements.html";
 		// declaration and instantiation of objects/variables
 		//System.setProperty("webdriver.firefox.marionette", "D:/nchaurasia/Automation-Architect/connect2tech.in-SeleniumWebDriver3.x_2/driver/geckodriver.exe");
 		System.setProperty("webdriver.chrome.driver", "D:/nchaurasia/Automation-Architect/connect2tech.in-SeleniumWebDriver3.x_2/driver/chromedriver.exe");

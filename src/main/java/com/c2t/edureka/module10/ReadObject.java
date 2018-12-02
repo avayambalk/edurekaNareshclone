@@ -14,7 +14,7 @@ public class ReadObject {
 		try {
 			// Read object repository file
 			InputStream stream = new FileInputStream(
-					new File("D:/nchaurasia/Automation-Architect/connect2tech.in-SeleniumWebDriver3.x_2/fb.properties"));
+					new File("D:/nchaurasia/Automation-Architect/connect2tech.in-SeleniumWebDriver3.x_2/src/main/java/com/c2t/edureka/module10/object.properties"));
 			// load all objects
 			p.load(stream);
 		
