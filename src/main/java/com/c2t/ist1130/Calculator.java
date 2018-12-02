@@ -9,20 +9,16 @@ package com.c2t.ist1130;
  * @YouTubeChannel: https://goo.gl/c7FAsq
  */
 
-public class SingleDimensionalArray {
-	public static void main(String[] args) {
-		
-		int arr5[];
+public class Calculator {
 	
-		int arr [] = new int [5];
-		int  [] arr2  = new int [5];
-		int arr3[] = {10,20,30,40,50};
-		int arr4[] = new int []{10,20,30,40,50};
+	
+	public static void main(String[] args) {
+		System.out.println(add(10,20));
 		
-		
-		for(int i=0;i<arr.length ; i ++){
-			arr[i] = i + 10;
-			System.out.println(arr[i]);
-		}
 	}
+	
+	public static int add(int x, int y){
+		return x + y;
+	}
+	
 }

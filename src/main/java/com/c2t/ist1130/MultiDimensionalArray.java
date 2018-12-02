@@ -9,20 +9,26 @@ package com.c2t.ist1130;
  * @YouTubeChannel: https://goo.gl/c7FAsq
  */
 
-public class SingleDimensionalArray {
+public class MultiDimensionalArray {
 	public static void main(String[] args) {
+		int arr [][] = {
+				
+				
+				{10,20},
+				{30,40}
+		};
 		
-		int arr5[];
-	
-		int arr [] = new int [5];
-		int  [] arr2  = new int [5];
-		int arr3[] = {10,20,30,40,50};
-		int arr4[] = new int []{10,20,30,40,50};
-		
-		
-		for(int i=0;i<arr.length ; i ++){
-			arr[i] = i + 10;
-			System.out.println(arr[i]);
+		for(int i=0;i<2;i++){
+			
+			for(int j=0;j<2;j++){
+				
+				arr[i][j] = i + j + 10;
+				
+				System.out.println(arr[i][j]);
+				
+			}
+			
+			
 		}
 	}
 }
