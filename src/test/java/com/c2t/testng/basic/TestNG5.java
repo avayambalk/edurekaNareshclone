@@ -24,14 +24,14 @@ public class TestNG5 {
 	}*/
 	
 	
-	@Test(priority=1,enabled=false)
+	@Test(priority=1,enabled=true)
 	public void test2(){
 		System.out.println("test2");
 	}
 	
 	@Test(priority=2)
 	public void test1(){
-		System.out.println("test1");
+		throw new RuntimeException();
 	}
 	
 	

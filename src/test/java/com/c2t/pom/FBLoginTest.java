@@ -27,7 +27,9 @@ public class FBLoginTest {
 
 	@Test
 	public void loginTest() {
+		String expected = "Facebook";
 		pom.login("message4naresh@gmail.com", "password");
+		String actual = driver.getTitle();
 	}
 
 }

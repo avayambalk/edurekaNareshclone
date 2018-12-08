@@ -18,6 +18,8 @@ public class LoginPOM3 {
 	
 
 	LoginPOM3(WebDriver d) {
+		System.out.println("this="+this);
+		driver = d;
 		PageFactory.initElements(driver, this);
 	}
 

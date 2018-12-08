@@ -11,13 +11,21 @@ package com.c2t.ist830;
 
 public class Calculator {
 	
-	public static int add(int x, int y){
-		int sum = x+y;
-		return sum;
+	public static void add(int a, int b){
+		System.out.println(a+b);
 	}
-
+	
+	public static void add(String a, String b){
+		System.out.println(a+b);
+	}
+	
+	public static void add(int a, int b, int c){
+		System.out.println(a+b+c);
+	}
+	
 	public static void main(String[] args) {
-		int s = add(10,20);
-		System.out.println(s);
+		add(10,20);
+		add(10,20,30);
+		add("java","selenium");
 	}
 }

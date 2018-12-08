@@ -22,7 +22,12 @@ public class FBLoginTestPageFactory {
 		driver = new FirefoxDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get("https://www.facebook.com/");
+		
+	
+		
 		pom = new LoginPOM3(driver);
+		
+		System.out.println("pom="+pom);
 	}
 
 	@Test

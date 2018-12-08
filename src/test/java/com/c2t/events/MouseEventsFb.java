@@ -33,7 +33,7 @@ public class MouseEventsFb {
 		Actions actions = new Actions(driver);
 		
 		
-		/*
+		
 		
 		Actions actions1 = actions.moveToElement(txtUsername);
 		Actions actions2 = actions1.click();
@@ -41,13 +41,13 @@ public class MouseEventsFb {
 		Actions actions4 = actions3.sendKeys("email");
 		Actions actions5 = actions4.doubleClick();
 		Action action = actions5.build();
-		action.perform();*/
+		action.perform();
 		
 				
-		Action action = actions.moveToElement(txtUsername).click().
+	/*	Action action = actions.moveToElement(txtUsername).click().
 				keyDown(Keys.SHIFT).
 		sendKeys("hello").doubleClick().build();
-		action.perform();
+		action.perform();*/
 		
 
 	}

@@ -9,16 +9,12 @@ import org.openqa.selenium.support.PageFactory;
 public class MyPOM {
 	
 	
-	
-	@FindBy(id="email")
-	WebElement element1;
-
 	WebDriver driver;
 	
 	public MyPOM(WebDriver driver) {
 		this.driver = driver;
 		// This initElements method will create all WebElements
-		PageFactory.initElements(driver, this);
+		//PageFactory.initElements(driver, this);
 	}
 	
 	
@@ -26,6 +22,7 @@ public class MyPOM {
 	
 	public void sendKeyToEmail(String email){
 	
+		WebElement element1 = driver.findElement(By.id("email"));
 		element1.sendKeys(email);
 	}
 	
