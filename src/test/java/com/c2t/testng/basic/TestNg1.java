@@ -1,44 +1,25 @@
 package com.c2t.testng.basic;
 
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-
 public class TestNG1 {
 	
 	
-	@BeforeTest
-	public void beforeTest(){
-		System.out.println("beforeTest");
-	}
-	
-	@BeforeMethod
-	public void beforeMethod(){
-		System.out.println("beforeMethod");
-	}
-	
-	@Test(priority=1)
+
+	@Test
 	public void firstName(){
-		System.out.println("firstName");
-		//d.findElement(by)
+		System.out.println("test1");
+		System.out.println("id11="+Thread.currentThread().getId());
 	}
 	
-	@Test(priority=-2)
+	@Test
 	public void lastName(){
-		System.out.println("lastName");
+		System.out.println("test2");
+		System.out.println("id22="+Thread.currentThread().getId());
 	}
 	
-	@AfterTest
-	public void afterTest(){
-		System.out.println("afterTest");
-	}
-	
-	@AfterMethod
-	public void afterMethod(){
-		System.out.println("afterMethod");
-	}
 	
 }

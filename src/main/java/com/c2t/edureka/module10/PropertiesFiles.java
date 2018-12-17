@@ -22,7 +22,9 @@ public class PropertiesFiles {
 			InputStream is = new FileInputStream(f);
 			p.load(is);
 			
-			String val = p.getProperty("key1");
+			System.out.println(p);
+			
+			String val = p.getProperty("fname");
 			System.out.println(val);
 			
 		

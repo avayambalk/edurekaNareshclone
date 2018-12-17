@@ -12,9 +12,9 @@ public class TestNgAssert {
 	public void test1(){
 
 		String expected = "hello";
-		String actual = "hello";
+		String actual = "hello1";
 		
-		Assert.assertEquals(actual, expected,"the 2 values are not equal...");
+		Assert.assertEquals(actual, expected,"Values not equal");
 	
 	}
 }

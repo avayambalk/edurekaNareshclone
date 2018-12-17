@@ -1,0 +1,4 @@
+2018-12-09 09:55:10 INFO  TestNG1:28 - This is info : test
+2018-12-09 09:55:10 WARN  TestNG1:31 - This is warn : test
+2018-12-09 09:55:10 ERROR TestNG1:32 - This is error : test
+2018-12-09 09:55:10 FATAL TestNG1:33 - This is fatal : test

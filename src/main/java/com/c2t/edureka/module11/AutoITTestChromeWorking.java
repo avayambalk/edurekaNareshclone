@@ -1,4 +1,4 @@
-package com.c2t.autoit;
+package com.c2t.edureka.module11;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;

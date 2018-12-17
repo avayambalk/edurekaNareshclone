@@ -47,9 +47,10 @@ public class TestNGScriptPageFactory {
 	@Test(priority = 2)
 	public void loginToFb(){
 		
-		fbPom.setEmail("message4naresh@gmail.com");
+		/*fbPom.setEmail("message4naresh@gmail.com");
 		fbPom.setPassword("password");
-		fbPom.clickLogin();
+		fbPom.clickLogin();*/
+		fbPom.login("message4naresh@gmail.com", "password");
 		
 	}
 	

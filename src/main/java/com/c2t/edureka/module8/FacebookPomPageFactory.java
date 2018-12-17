@@ -36,7 +36,8 @@ public class FacebookPomPageFactory {
 	}
 	
 	public void setEmail(String email){
-		emailFb.sendKeys(email);
+		//emailFb.sendKeys(email);
+		driver.findElement(By.id("email"));
 	
 	}
 	
@@ -46,6 +47,13 @@ public class FacebookPomPageFactory {
 	
 	public void clickLogin(){
 		buttonFb.click();
+	}
+	
+	public void login(String e, String p){
+		setEmail(e);
+		setPassword(p);
+		clickLogin();
+		
 	}
 	
 	

@@ -9,16 +9,17 @@ package com.c2t.ist1130;
  * @YouTubeChannel: https://goo.gl/c7FAsq
  */
 
-class Remote{
-	
-	void Remote(){
-	}
-
-}
-
-
-public class Constructors {
+public class StringManipulation {
 	public static void main(String[] args) {
 		
+		String s = "Hello World";
+		
+		char c = s.charAt(0);
+		System.out.println(c);
+		
+		//compareTo(String anotherString) 
+		//compareToIgnoreCase(String str)
+		//concat(String str) 
+		//
 	}
 }

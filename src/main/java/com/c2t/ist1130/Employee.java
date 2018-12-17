@@ -4,21 +4,16 @@ package com.c2t.ist1130;
  * @author : Naresh Chaurasia
  * @email : message4naresh@gmail.com
  * @Code : https://bitbucket.org/connect2tech
- * @WebSite : http://c2t.nchaurasia.in/ 
+ * @WebSite : https://connect2tech.in/ 
  * @Profile : https://goo.gl/2mCt6v
  * @YouTubeChannel: https://goo.gl/c7FAsq
  */
 
-class Remote{
+public class Employee {
 	
-	void Remote(){
-	}
+	int id;
+	String name;
+	int age;
+	String designation;
 
-}
-
-
-public class Constructors {
-	public static void main(String[] args) {
-		
-	}
 }

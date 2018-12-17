@@ -1,4 +1,4 @@
-package com.c2t.edureka.module10;
+package com.c2t.edureka.module11;
 
 import java.util.concurrent.TimeUnit;
 
@@ -14,26 +14,25 @@ public class SikuliDemoChromeWorking {
 	public static void main(String[] args) throws FindFailed {
 
 		System.setProperty("webdriver.chrome.driver", "D:/nchaurasia/Automation-Architect/connect2tech.in-SeleniumWebDriver3.x_2/driver/chromedriver.exe");
+		
+		Pattern pattern1 = new Pattern("D:/nchaurasia/Automation-Architect/img/Img-Text1.PNG");
+		Pattern pattern2 = new Pattern("D:/nchaurasia/Automation-Architect/img/Img-Save1.PNG");
+		
 		WebDriver driver;
-		
-		Pattern p1 = new Pattern("D:/nchaurasia/Automation-Architect/img/Img-Text1.PNG");
-		Pattern p2 = new Pattern("D:/nchaurasia/Automation-Architect/img/Img-Save1.PNG");
-		
-		Screen s = new Screen();
-		
-		
-
-		// Open Chrome browser
 		driver = new ChromeDriver();
 		driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		driver.get("file:///D:/nchaurasia/Automation-Architect/connect2tech.in-SeleniumWebDriver3.x_2/src/main/resources/FileUpload.html");
 		driver.findElement(By.id("fileToUpload")).click();
+		
+		Screen s = new Screen();
+		
+		s.wait(pattern1,5);
+		s.type(pattern1,"hello.txt");
+		s.click(pattern2);
 
 		
-		s.wait(p1,5);
-		s.type(p1,"hello.txt");
-		s.click(p2);
+		
 		
 	}
 
