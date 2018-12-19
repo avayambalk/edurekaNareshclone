@@ -9,16 +9,17 @@ class Student{
 	}
 }
 
+class Bank{
+	private int balance;
+	
+	void display(){
+		System.out.println(balance);
+	}
+}
+
 public class ClassObjectConcept {
 	public static void main(String[] args) {
-		int a = 10;
-		Student s = new Student();
-		s.name = "ram";
-		s.reg_no = 100;
-		
-		System.out.println(s.name);
-		System.out.println(s.reg_no);
-		
-		s.study();
+		Bank b = new Bank();
+		b.display();
 	}
 }
