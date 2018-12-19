@@ -49,7 +49,7 @@ public class ImplicitWait {
 			lEndTime2 = new Date().getTime();
 			difference2 = lEndTime2 - lStartTime;
 			System.out.println("Elapsed milliseconds-2: " + difference2);
-			System.out.println("Elapsed seconds-2: " + (float) difference2 / 1000);
+			//System.out.println("Elapsed seconds-2: " + (float) difference2 / 1000);
 			Assert.assertTrue(false);
 			
 			

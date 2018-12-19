@@ -11,19 +11,20 @@ public class ParameterTest {
 	 * parameter is defined at suite level.
 	 */
 	
-	@Parameters({"val1","class_name"})
+	@Parameters({"browser"})
 	@BeforeClass
-	public void before(String param1, String param2) {
+	public void before(String param1) {
 		System.out.println("before:" + param1);
-		System.out.println("before:" + param2);
+		if(param1.equals("FF")){
+			System.out.println("Create FF");
+		}else{
+			System.out.println("Chrome");
+		}
 	}
 
-	@Parameters({"val1","class_name"})
+
 	@Test
-	public void prameterTestOne(String param1, String param2) {
-		
-		System.out.println("Test one suite param1 is: " + param1);
-		System.out.println("Test one suite param2 is: " + param2);
+	public void prameterTestOne() {
 	}
 
 	/**
