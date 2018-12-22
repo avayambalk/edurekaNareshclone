@@ -1,4 +1,4 @@
-package com.c2t.ist1130.exception;
+package com.c2t.ist1130;
 
 /**
  * @author : Naresh Chaurasia

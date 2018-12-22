@@ -4,18 +4,18 @@ import java.util.Scanner;
 
 //Method overriding in Java
 class Car{
-	String color;
+	String color="red";
+	
 	public void startEngine(){
 		System.out.println("I am start engine...");
 	}
 }
 
-class Hyundai extends Car{
-	
-}
-
 class BMW extends Car{
 	public void startEngine(){
+		
+		color = "black";
+		
 		System.out.println("I am start engine, with more power");
 	}
 }
