@@ -30,8 +30,16 @@ public class Alerts3 {
 		driver.findElement(By.id("prompt")).click();
 		
 		Alert alert = driver.switchTo().alert();
-		alert.sendKeys("Sunaina S Ram");
+
 		
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		alert.sendKeys("Sunaina S Ram");
 		
 		try {
 			Thread.sleep(2000);
