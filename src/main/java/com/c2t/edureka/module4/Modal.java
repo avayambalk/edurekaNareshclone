@@ -23,9 +23,10 @@ public class Modal {
 		driver.findElement(By.id("myBtn")).click();
 		
 		WebElement we = driver.findElement(By.id("myModal"));
-		we.getText();
+		String text = we.getText();
+		System.out.println(text);
 		
-		we.click();
+		//we.click();
 		
 		
 	}
