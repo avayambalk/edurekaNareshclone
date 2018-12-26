@@ -7,30 +7,30 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 
-public class AlertProgram {
+public class Dropdown {
 
 	public static void main(String[] args) {
 		
-		String url = "http://cookbook.seleniumacademy.com/DragDropDemo.html";
+		String url = "file:///D:/nchaurasia/Automation-Architect/connect2tech.in-SeleniumWebDriver3.x_2/src/main/java/com/c2t/edureka/ist830/module2/LocatingMultipleElements.html";
 		// declaration and instantiation of objects/variables
 		//System.setProperty("webdriver.firefox.marionette", "D:/nchaurasia/Automation-Architect/connect2tech.in-SeleniumWebDriver3.x_2/driver/geckodriver.exe");
-		System.setProperty("webdriver.chrome.driver", "D:/nchaurasia/Automation-Architect/connect2tech.in-SeleniumWebDriver3.x_2/driver/chromedriver.exe");
-		//Ctrl + shift + T
-		WebDriver driver = new ChromeDriver();
+		System.setProperty("webdriver.firefox.marionette", "D:/nchaurasia/Automation-Architect/connect2tech.in-SeleniumWebDriver3.x_2/driver/geckodriver.exe");
+
+
+		WebDriver driver = new FirefoxDriver();
 		driver.get(url);
 		
-		WebElement element1 = driver.findElement(By.id("draggable"));
-		WebElement element2 = driver.findElement(By.id("droppable"));
+		WebElement dropDown = driver.findElement(By.id("designation"));
 		
-		Actions actions = new Actions(driver);
+		Select select = new Select(dropDown);
+		//select.selectByIndex(2);
+		select.selectByValue("prog");
 		
-		actions.dragAndDrop(element1, element2).perform();
-
 		
-		System.out.println("done...");
 		
+				
 		
 		
 	}
