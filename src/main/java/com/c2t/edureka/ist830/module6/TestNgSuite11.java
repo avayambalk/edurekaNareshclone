@@ -2,6 +2,7 @@ package com.c2t.edureka.ist830.module6;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
@@ -19,17 +20,17 @@ import org.testng.annotations.Test;
  */
 
 public class TestNgSuite11 {
-	@Test
-	public void test_first_name(){
-		System.out.println("test_first_name");
-		long id1 = Thread.currentThread().getId();
-		System.out.println("TestNgSuite11/id1="+id1);
+	WebDriver driver;
+	@BeforeTest
+	public void before(){
+		System.setProperty("webdriver.firefox.marionette", "geckodriver.exe");
+		driver = new FirefoxDriver();
 	}
 	
 	@Test
-	public void test_last_name(){
-		System.out.println("test_last_name");
-		long id2 = Thread.currentThread().getId();
-		System.out.println("TestNgSuite11/id2="+id2);
+	public void test_first_name(){
+		System.out.println("test_first_name");
+		driver.get("https://www.google.com/");
+		
 	}
 }

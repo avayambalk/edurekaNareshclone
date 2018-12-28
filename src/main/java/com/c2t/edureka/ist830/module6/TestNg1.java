@@ -20,40 +20,21 @@ import org.testng.annotations.Test;
 
 public class TestNg1 {
 	
-	WebDriver driver ;
 	
-	@BeforeTest
-	public void beforeTest(){
-		String url = "file:///D:/nchaurasia/Automation-Architect/connect2tech.in-SeleniumWebDriver3.x_2/src/main/java/com/c2t/edureka/ist830/module2/LocatingMultipleElements.html";
-		// declaration and instantiation of objects/variables
-		System.setProperty("webdriver.firefox.marionette", "D:/nchaurasia/Automation-Architect/connect2tech.in-SeleniumWebDriver3.x_2/driver/geckodriver.exe");
-		driver = new FirefoxDriver();
-		driver.get(url);
+	@Test(dependsOnMethods={"test2"})
+	public void test1(){
+		System.out.println("test1");
 	}
 	
-	@BeforeMethod
-	public void beforeMethod(){
-		System.out.println("beforeMethod");
+	@Test()
+	public void test2(){
+		System.out.println("test2");
 	}
 	
-	@Test
-	public void test_first_name(){
-		driver.findElement(By.name("first_name")).sendKeys("first name");
-	}
-	
-	@Test
-	public void test_last_name(){
-		driver.findElement(By.name("lastname")).sendKeys("last name");
+	@Test()
+	public void test2_2(){
+		System.out.println("test2_2");
 		throw new RuntimeException();
 	}
-	
-	@AfterMethod
-	public void afterMethod(){
-		System.out.println("afterMethod");
-	}
-	
-	@AfterTest
-	public void after(){
-		driver.close();
-	}
+
 }

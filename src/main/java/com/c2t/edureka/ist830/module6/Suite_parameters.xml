@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="suite1" parallel="classes" thread-count="2">
+	<test name="test1">
+		<parameter name="userid" value="naresh"></parameter>
+		<parameter name="password" value="pass1234"></parameter>
+		<classes>
+			<class name="com.c2t.edureka.ist830.module6.ParametersTestNg"></class>
+		</classes>
+	</test>
+	
+	<test name="test2">
+		<parameter name="userid" value="naresh1"></parameter>
+		<parameter name="password" value="pass1235"></parameter>
+		<classes>
+			<class name="com.c2t.edureka.ist830.module6.ParametersTestNg"></class>
+		</classes>
+	</test>
+	
+</suite>

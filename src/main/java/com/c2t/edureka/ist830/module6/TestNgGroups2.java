@@ -2,7 +2,6 @@ package com.c2t.edureka.ist830.module6;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
@@ -19,22 +18,21 @@ import org.testng.annotations.Test;
  * @YouTubeChannel: https://goo.gl/c7FAsq
  */
 
-public class TestNgSuite1 {
-	WebDriver driver;
-	@BeforeTest
-	public void before(){
-		System.setProperty("webdriver.chrome.driver", "D:/nchaurasia/Automation-Architect/connect2tech.in-SeleniumWebDriver3.x_2/driver/chromedriver.exe");
-		driver = new ChromeDriver();
-	}
-	
-	@Test
+public class TestNgGroups2 {
+
+	@Test(groups={"sanity"})
 	public void test_first_name(){
-		System.out.println("test_first_name");
-		driver.get("https://www.google.com/");
-		
+		System.out.println("2.test_first_name");
 	}
 	
+	@Test(groups={"regression"})
+	public void test_last_name(){
+		System.out.println("2.test_last_name");
+	}
 	
-	
+	@Test(groups={"sanity","regression"})
+	public void test_middle_name(){
+		System.out.println("2.test_middle_name");
+	}
 
 }
