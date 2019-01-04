@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
 
 /**
  * @author : Naresh Chaurasia
@@ -46,6 +47,23 @@ public class LocatorId {
 		/*WebElement we = driver.findElement(By.tagName("input"));
 		we.clear();
 		we.sendKeys("using tags");*/
+		
+		/*List<WebElement> radios = driver.findElements(By.className("w3-radio"));
+		
+		for(int i=0;	i<radios.size();	i++){
+			WebElement we = radios.get(i);
+			String val = we.getAttribute("value");
+			if(val.equals("female")){
+				we.click();
+			}
+		}*/
+		
+		WebElement dropdown = driver.findElement(By.id("designation"));
+		
+		Select select = new Select(dropdown);
+		//select.selectByVisibleText("CEO");
+		//select.selectByValue("CEO1");
+		select.selectByIndex(2);
 		
 	
 		
