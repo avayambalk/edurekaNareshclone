@@ -7,33 +7,30 @@ import java.util.Properties;
  * @author : Naresh Chaurasia
  * @email : message4naresh@gmail.com
  * @Code : https://bitbucket.org/connect2tech
- * @WebSite : http://c2t.nchaurasia.in/ 
+ * @WebSite : http://c2t.nchaurasia.in/
  * @Profile : https://goo.gl/2mCt6v
  * @YouTubeChannel: https://goo.gl/c7FAsq
  */
 
 public class PropertiesFiles {
 	public static void main(String[] args) {
-		
-		File f = new File("config.properties");
-		Properties p = new Properties();
-		
+
 		try {
-			InputStream is = new FileInputStream(f);
-			p.load(is);
+			File f = new File(
+					"D:/nchaurasia/Automation-Architect/connect2tech.in-SeleniumWebDriver3.x_2/src/main/java/com/c2t/edureka/module10/edureka.properties");
+			InputStream fis = new FileInputStream(f);
+
+			Properties  prop = new Properties();
+			prop.load(fis);
+
+			System.out.println(prop);
 			
-			System.out.println(p);
-			
-			String val = p.getProperty("fname");
-			System.out.println(val);
-			
-		
-		
+			String s = prop.getProperty("name1");
+			System.out.println(s);
+
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			// TODO: handle exception
 		}
-		
-		
+
 	}
 }
