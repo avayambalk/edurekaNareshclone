@@ -1,4 +1,4 @@
-package com.c2t.edureka.module11;
+package com.c2t.edureka.ist830.module11;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -41,12 +41,12 @@ public class AutoITTestChromeWorking {
 		System.out.println(we);
 		we.click();
 		
-		/*try {
+		try {
 			//Runtime.getRuntime().exec("D:/nchaurasia/Automation-Architect/AutoIT/FileUpload_Dec2018.exe");
 			Runtime.getRuntime().exec("D:/nchaurasia/Automation-Architect/AutoIT/FileUpload_08-01-2019.exe");
 		} catch (Exception e) {
 			// TODO: handle exception
-		}*/
+		}
 		
 		
 		/*try {

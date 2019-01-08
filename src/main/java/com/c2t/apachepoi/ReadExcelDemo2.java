@@ -36,6 +36,11 @@ public class ReadExcelDemo2 {
 			
 			Iterator<Row> rows = sheet.rowIterator();
 			
+			String s [][] = new String[2][2];
+			
+			int rowCount=0;
+			int colCount=0;
+			
 			while(rows.hasNext()){
 				Row row = rows.next();
 				
@@ -44,7 +49,12 @@ public class ReadExcelDemo2 {
 				while(cell.hasNext()){
 					Cell c = cell.next();
 					System.out.println(c);
+					String data = c.toString();
+					
+					s[rowCount][colCount] = data;
+					++colCount;
 				}
+				++rowCount;
 				System.out.println("--------------------");
 			}
 			
