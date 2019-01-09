@@ -1,4 +1,11 @@
-2018-12-09 09:55:10 INFO  TestNG1:28 - This is info : test
-2018-12-09 09:55:10 WARN  TestNG1:31 - This is warn : test
-2018-12-09 09:55:10 ERROR TestNG1:32 - This is error : test
-2018-12-09 09:55:10 FATAL TestNG1:33 - This is fatal : test
+
+2019-01-09 21:54:15 ERROR HtmlUnitHeadLessBrowser:53 - This is error : org.openqa.selenium.NoSuchElementException: Unable to locate element with ID: 'email1'
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.9.1', revision: '63f7b50', time: '2018-02-07T22:42:28.403Z'
+System info: host: 'LAPTOP-7JDHPC9F', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: driver.version: HtmlUnitDriver
+2019-01-09 21:54:15 FATAL HtmlUnitHeadLessBrowser:54 - This is fatal : org.openqa.selenium.NoSuchElementException: Unable to locate element with ID: 'email1'
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.9.1', revision: '63f7b50', time: '2018-02-07T22:42:28.403Z'
+System info: host: 'LAPTOP-7JDHPC9F', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: driver.version: HtmlUnitDriver
