@@ -24,7 +24,7 @@ public class AutoITTestChromeWorking {
 
 	@BeforeClass
 	public static void setUp() {
-		System.setProperty("webdriver.chrome.driver", "D:/nchaurasia/Automation-Architect/connect2tech.in-SeleniumWebDriver3.x_2/driver/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "D:/nchaurasia/Automation-Architect/connect2tech.in-SeleniumWebDriver3.x_2/chromedriver_win32_2.45/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
@@ -41,19 +41,12 @@ public class AutoITTestChromeWorking {
 		System.out.println(we);
 		we.click();
 		
-		/*try {
-			//Runtime.getRuntime().exec("D:/nchaurasia/Automation-Architect/AutoIT/FileUpload_Dec2018.exe");
-			Runtime.getRuntime().exec("D:/nchaurasia/Automation-Architect/AutoIT/FileUpload_08-01-2019.exe");
+		try {
+			Runtime.getRuntime().exec("D:/nchaurasia/Automation-Architect/AutoIT/FileUpload_10-01-2019.exe");
 		} catch (Exception e) {
 			// TODO: handle exception
-		}*/
-		
-		
-		/*try {
-			Runtime.getRuntime().exec("D:/nchaurasia/Automation-Architect/AutoIT/FileUploadSelenium2.exe");
-		} catch (Exception e) {
-			// TODO: handle exception
-		}*/
+		}
+
 		
 	}
 

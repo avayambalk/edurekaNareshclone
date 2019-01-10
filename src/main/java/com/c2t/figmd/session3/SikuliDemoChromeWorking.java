@@ -1,4 +1,4 @@
-package com.c2t.edureka.module11;
+package com.c2t.figmd.session3;
 
 import java.util.concurrent.TimeUnit;
 

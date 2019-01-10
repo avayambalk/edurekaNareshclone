@@ -18,7 +18,7 @@ public class ScreenShot2 {
 
 	public static FirefoxDriver driver;
 
-	private static String URL = "https://www.google.co.in/?gfe_rd=cr&dcr=0&ei=UrWLWr7TBaycX_C9l8AC&gws_rd=ssl";
+	private static String URL = "https://www.facebook.com/";
 
 	@BeforeClass
 	public static void setUp() {
@@ -33,7 +33,7 @@ public class ScreenShot2 {
 
 		//TakesScreenshot screen = (TakesScreenshot)driver;
 		File f = driver.getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(f, new File("d:/screenshot.jpg" ));
+		FileUtils.copyFile(f, new File("d:/facebook.jpg" ));
 
 	}
 	
